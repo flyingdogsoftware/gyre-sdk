@@ -1,4 +1,5 @@
 # Tools
+![Tools](../tools.png)
 
 As research in the field of image and video editing progresses rapidly, new ideas and tools for manipulating and generating images are continually emerging. Frameworks like ComfyUI, while useful, often don't cover all aspects comprehensively. Our platform provides a powerful environment not only for end users, such as artists and designers, but also for researchers and developers. It facilitates the quick implementation of innovative UI ideas, benefiting artists and designers by enhancing their creative processes and productivity. These tools are not limited to advanced AI features; they also include traditional image editing tools.
 

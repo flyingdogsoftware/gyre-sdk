@@ -1,4 +1,5 @@
 ## UI Components
+![UI Components](../components.png)
 
 
 In any image editing application, the form input is usually more complex than just standard form elements like text input, switches, or sliders. ComfyUI nodes also struggle with this problem, resulting in text input for configuration of node parameters (e.g., gradient values as string instead of colorful gradient sliders). With our powerful form editor, the end-user can adapt new workflows directly inside the main application as dialogs. Providing these users powerful UI components is key for having an overall professional and easy-to-use interface.
