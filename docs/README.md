@@ -1,39 +1,49 @@
-# Hello, world!
+# Welcome to the Gyre Plugin SDK
 
-Nice one! You're up and running. This site was generated from the contents of your `docs` folder. It
-currently is made of two pages. This one, and `examples.md`, which you can visit by clicking on the
-link on the left side of the page. You can get back to this page by clicking the top left title of
-the page.
+![Gyre SDK](head.png)
 
-## Let's add another page
 
-All of your documentation lives under the `docs` directory. You can start adding markdown files, and
-when running the `serve` command you will see changes automatically updated in the browser.
+Welcome to the Gyre Plugin SDK integrated in Gyre the ultimate image editing application tailored for professionals and enthusiasts alike. Gyre offers a comprehensive platform designed to enhance and streamline your creative workflows with its powerful SDK.
 
-Try it - add a new markdown file under `docs`, paste the content below, and watch what happens.
+The Gyre SDK supports a wide array of devices, including iPad and web platforms, ensuring you can work seamlessly across different environments. With standalone application support, Gyre integrates effortlessly into your existing workflow.
 
-```markdown
----
-title: Another page
+Our large API and hybrid plugins provide the tools you need to automate and customize workflows, manage AI models, and access image data with ease. Gyre supports the development of UI plugins, tool plugins, layer plugins, and brush plugins, offering unmatched flexibility to bring your creative ideas to life.
+
+Harness the power of advanced AI features to take your image editing to the next level. Gyre empowers you to integrate with connected services, automate processes, and add new capabilities effortlessly.
+
+Join our vibrant community on Discord, engage in developer sessions, and benefit from our comprehensive test environment. Explore the possibilities with Gyre and elevate your image editing capabilities. Experience the power and versatility of Gyre today, and take your creative workflow to new heights.
+
 ---
 
-# Adding new pages is that simple
-```
+## Getting Started with the Gyre SDK
 
-When you hit save, you should see the left side navigation has updated, and a link to your new page
-shows up.
+| [Getting Started with the Gyre SDK](getting_started.md) | | | |
+| -------------------------------------- | -| -| -|
+| Learn how to set up and begin using the Gyre SDK for your projects. | | | |
 
-## What next?
+## Plugin Types
 
-There are plenty of resources to learn more about Docgen and how to use it effectively. Here are
-some articles to get you started:
+| [UI Components](Plugin_Types/tools.md) | [Tools](Plugin_Types/tools.md) | [Special Layers](#) | [Brushes](#) |
+| ------------------- | ---------- | ------------------- | ------------ |
+| Build and integrate custom user interface elements. | Develop new tools to extend Gyre's functionality. | Create and manage layers with specialized features. | Design custom brushes to enhance your image editing tasks. |
 
-- [The official tutorial](https://docgen.streetwriters.co/tutorial)
-- [Deployment instructions](https://docgen.streetwriters.co/deployment)
-- [Docgen docs](https://docgen.streetwriters.co/)
+## Discover
 
-## Where can I get help?
+| [Gyre API](api.md) | [Icon Management](icon_management.md) | [Default UI Components](#) | [Gyre Plugins Development for Adobe UXP Developers](uxp.md) |
+| ------------- | -------------------- | -------------------------- | ----------------------------------------------- |
+| Explore the extensive API for powerful and flexible integrations. | Manage and customize icons within your plugins. | Utilize built-in UI components to streamline development. | Transition your skills from Adobe UXP to Gyre. |
+| [Plugin Samples](#) | | | |
+| Access sample plugins to kickstart your development process. | | | |
 
-Feel free to open issues on the [Github Repo](https://github.com/thecodrr/docgen), especially if
-you did not find an answer to a question in our documentation. You can also reach out directly to
-the maintainer via [Twitter](https://twitter.com/thecodrr) or email at thecodrr@streetwriters.co.
+## Share Your Plugin
+
+| [Share Your Plugin](#) | | | |
+| ---------------------- | -| -| -|
+| Learn how to distribute your plugins and share them with the Gyre community. | | | |
+
+## Join the Community
+
+| [Join the Community](#) | | | |
+| ----------------------- | -| -| -|
+| Connect with other developers and users in the Gyre community through Discord and developer sessions. | | | |
+
