@@ -1,4 +1,5 @@
 ## Getting Started with the Gyre SDK
+![Getting Startet](start.png)
 
 Before implementing a plugin, please identify your focus. Here are the options:
 

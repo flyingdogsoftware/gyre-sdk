@@ -1,4 +1,5 @@
 # Gyre API
+![Gyre API](api.png)
 
 The `gyre` API is accessible via `globalThis.gyre` and provides various parameters, functions, and APIs to interact with the current open document, handle layers, manage dialogs, and more in a ComfyUI/Gyre installation.
 

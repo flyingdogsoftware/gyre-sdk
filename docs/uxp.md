@@ -1,4 +1,5 @@
 # Gyre Plugins Development for Adobe UXP Developers
+![Transition](uxp.png)
 
 ## Comparison Table
 

@@ -1,4 +1,5 @@
 ## Icon Management
+![Icon Management](icons.png)
 
 Each plugin can provide different icons which can be used in templates by the `fds-image-editor-button` component. To make things easier, these icons have to be provided in the manifest of each plugin. This ensures that inside the templates, there is no unnecessary icon code which can bloat the entire project, especially if an icon is used multiple times.
 
