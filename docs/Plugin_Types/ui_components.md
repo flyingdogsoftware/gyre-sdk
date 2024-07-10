@@ -6,6 +6,14 @@ In any image editing application, the form input is usually more complex than ju
 
 We also offer direct configuration for splitting one string value into several values, which can be assigned with our Gyre mappings tool to each ComfyUI node parameter.
 
+<img src="../component2.png" >
+
+Gradient slider component used two times in a dialog.
+
+<img src="../component3.png"  width="400">
+
+Same component offered in form editor so non-developer can use it for any workflows.
+
 ### Example
 
 ```html
@@ -20,7 +28,7 @@ Using `split_value_num=2` and `split_value_type=number`, the above example will 
 
 These fields are utilized in Gyre mappings.
 
-![bild komponenten](#)
+
 
 ## Manifest
 
@@ -121,6 +129,10 @@ Here is an example of a JSON manifest for two components:
   ]
 }
 ```
+
+<img src="../component1.png" width="400">
+
+
 ## Gyre API
 
 Have a look at the Gyre API for documentation of the global API which is available [here](#). For that special component type, there are two individual parameters:

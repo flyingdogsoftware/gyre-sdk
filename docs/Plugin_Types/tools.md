@@ -3,6 +3,11 @@
 
 As research in the field of image and video editing progresses rapidly, new ideas and tools for manipulating and generating images are continually emerging. Frameworks like ComfyUI, while useful, often don't cover all aspects comprehensively. Our platform provides a powerful environment not only for end users, such as artists and designers, but also for researchers and developers. It facilitates the quick implementation of innovative UI ideas, benefiting artists and designers by enhancing their creative processes and productivity. These tools are not limited to advanced AI features; they also include traditional image editing tools.
 
+<img src="../tools2.png" >
+
+The SAM Auto Matte tool operates in point mode and utilizes ComfyUI workflows as its backend.
+
+
 ## Possible Examples of AI Tools
 
 - **Interactive Segmentation Tools**: Allow users to manually select and refine object boundaries in images.
@@ -27,13 +32,14 @@ As research in the field of image and video editing progresses rapidly, new idea
 
 For supporting development, we offer a lightweight environment with some basic functions like zoom, which is the most challenging part for developing such a tool.
 
-![Bild](#)
+<img src="../tools1.png" width="400">
+
+Same tool using rectengular mode and our test environment.
 
 ## Setting Up a New Tool
 
 The steps are similar to custom UI components, so these are also based on Web Components. For parameter selection, we offer a floating toolbar that is located automatically depending on document size and scroll position screen size. Each tool needs an additional web component for dialog elements of such a toolbar with the suffix `-floating-toolbar`.
 
-![Bild](#)
 
 ### Example
 
@@ -44,7 +50,7 @@ The steps are similar to custom UI components, so these are also based on Web Co
 
 The `layer` parameter points to an internal data object storing all information of the current tool. Both components are used automatically by selecting a tool in the toolbar. Quite often, such a tool offers different variations, so the main application supports a menu with the sub-tools for switching between the states.
 
-![Bild submenu](#)
+<img src="../tools3.png" width="300">
 
 For testing a tool, just use our test environment from our SDK:
 

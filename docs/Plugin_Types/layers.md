@@ -1,4 +1,5 @@
 # Custom Layer Types
+![Layers](../layers2.png)
 
 Custom Layer Types in our AI image editing application are designed to support the integration of complex applications within the editing environment. These layers extend the capabilities of our application, allowing for a rich and versatile editing experience.
 
@@ -19,6 +20,12 @@ Our application currently supports various layer types, such as 3D and Pose laye
 ### Text Layers
 - Support both AI and non-AI text editing.
 - Enable text recognition, font style changes, and advanced typography effects.
+
+
+<img src="../layer1.png">
+
+Text Layer integrated as plugin "fds-image-editor-text"
+
 
 ### Potential Future Layers
 - **Video Layers**: Incorporate video editing capabilities, allowing for frame-by-frame editing, video overlays, and transitions.
@@ -45,7 +52,7 @@ Web Components technology is utilized for the development of these custom layers
 - **Interoperability**: Web Components ensure that custom layers can seamlessly integrate with other parts of the application, regardless of the underlying framework or technology stack.
 
 
-Setting Up a New Layer Type
+## Setting Up a New Layer Type
 The steps are similar to Tools plugins, so these are also based on Web Components. For parameter selection, we offer a toolbar at the top. Each layer type needs an additional web component for dialog elements of such a toolbar with the suffix `-toolbar`
 
 ```html
@@ -54,6 +61,10 @@ The steps are similar to Tools plugins, so these are also based on Web Component
 ```
 
 The `layer` parameter points to an internal data object storing all information of the  layer. Both components are used automatically by addding  a new layer in the add layer menu (+). 
+
+<img src="../layer2.png" width="400">
+
+Text layer plugin showing in "Add layer" Dialog.
 
 Both components need to provide a refresh() function which will be automatically called if something has been changed in the main application. 
 
@@ -123,6 +134,11 @@ function quickMask() {
   // Implementation here
 }
 ```
+
+<img src="../layer3.png" width="400">
+
+Quick mask example using Inpainting brush tool
+
 
 ### 6. getScene() and setScene(sceneInfo)
 - **Description**: Serialize and deserialize layer data.
@@ -196,6 +212,9 @@ The manifest structure for layer plugins is crucial for defining the properties 
 - **images**: An object containing the paths to images required for the "Add Layer" menu.
   - **largeIcon**: The path to the large icon image for the layer.
   - **largeIconHover**: The path to the hover state large icon image for the layer.
+
+
+
 
 ### Example Usage
 
