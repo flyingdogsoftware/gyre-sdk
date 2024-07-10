@@ -31,18 +31,18 @@ For supporting development, we offer a lightweight environment with some basic f
 
 ## Setting Up a New Tool
 
-The steps are similar to custom UI components, so these are also based on Web Components. For parameter selection, we offer a floating toolbar that is located automatically depending on document size and scroll position screen size. Each tool needs an additional web component for dialog elements of such a toolbar with the suffix `.floating-toolbar`.
+The steps are similar to custom UI components, so these are also based on Web Components. For parameter selection, we offer a floating toolbar that is located automatically depending on document size and scroll position screen size. Each tool needs an additional web component for dialog elements of such a toolbar with the suffix `-floating-toolbar`.
 
 ![Bild](#)
 
 ### Example
 
 ```html
-<fds-image-editor-sam layer {tool_layer}></fds-image-editor-sam>
-<fds-image-editor-sam-floating-toolbar layer {tool_layer}></fds-image-editor-sam-floating-toolbar>
+<fds-image-editor-sam layer={tool_layer}></fds-image-editor-sam>
+<fds-image-editor-sam-floating-toolbar layer={tool_layer}></fds-image-editor-sam-floating-toolbar>
 ```
 
-The `{tool_layer}` parameter points to an internal data object storing all information of the current tool. Both components are used automatically by selecting a tool in the toolbar. Quite often, such a tool offers different variations, so the main application supports a menu with the sub-tools for switching between the states.
+The `layer` parameter points to an internal data object storing all information of the current tool. Both components are used automatically by selecting a tool in the toolbar. Quite often, such a tool offers different variations, so the main application supports a menu with the sub-tools for switching between the states.
 
 ![Bild submenu](#)
 

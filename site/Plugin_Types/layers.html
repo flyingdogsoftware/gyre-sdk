@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Custom Layer Types</title><meta name="description" content="Documentation for Custom Layer Types"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1720644357";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/api">Gyre API</a></li><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li><a href="/gyre-sdk/icon_management">Icon Management</a></li><li><a href="/gyre-sdk/uxp">Gyre Plugins Development for Adobe UXP Developers</a></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li></ul></details></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="custom-layer-types">Custom Layer Types</h1>
+<p>Custom Layer Types in our AI image editing application are designed to support the integration of complex applications within the editing environment. These layers extend the capabilities of our application, allowing for a rich and versatile editing experience.</p>
+<h2 id="overview">Overview</h2>
+<p>Our application currently supports various layer types, such as 3D and Pose layers. These custom layers provide specific functionalities tailored to different editing needs. For instance, text layers can be utilized for both AI-driven and traditional image editing tasks. The flexibility of our custom layer types paves the way for the integration of other possible types, such as video, audio, and image galleries. So in contrast to tools layer these plugin type stores important data of one layer in the editing process of a document. It is also shown in the layer stack and can be moved around there.</p>
+<h2 id="features">Features</h2>
+<h3 id="3d-layers">3D Layers</h3>
+<ul>
+<li>Allow for the manipulation and integration of 3D objects within the image.</li>
+<li>Enable advanced editing techniques such as 3D modeling, lighting adjustments, and perspective changes.</li>
+</ul>
+<h3 id="pose-layers">Pose Layers</h3>
+<ul>
+<li>Facilitate pose estimation and manipulation.</li>
+<li>Ideal for applications requiring human pose recognition and adjustments, such as virtual fitting rooms or animation.</li>
+</ul>
+<h3 id="text-layers">Text Layers</h3>
+<ul>
+<li>Support both AI and non-AI text editing.</li>
+<li>Enable text recognition, font style changes, and advanced typography effects.</li>
+</ul>
+<h3 id="potential-future-layers">Potential Future Layers</h3>
+<ul>
+<li>
+<p><strong>Video Layers</strong>: Incorporate video editing capabilities, allowing for frame-by-frame editing, video overlays, and transitions.</p>
+</li>
+<li>
+<p><strong>Audio Layers</strong>: Add sound editing features, supporting audio overlays, sound effects, and background music integration.</p>
+</li>
+<li>
+<p><strong>Image Gallery Layers</strong>: Create and manage image collections within a single layer, useful for photo albums or project-based image grouping.</p>
+</li>
+<li>
+<p><strong>Text Chat Layers</strong>: Having an AI LLM Chat bot interface for storing text data of requests and responses.</p>
+</li>
+</ul>
+<h2 id="data-sources">Data Sources</h2>
+<p>As these layers store data, users must be aware of where this data is coming from. In the case of text layers, the data source is simply text input. However, others like 3D or Pose layers offer various types of data input via a huge online library or local file upload. For both scenarios, we offer helper tools to assist users.</p>
+<h2 id="development-and-testing">Development and Testing</h2>
+<p>These custom layer plugins are developed and tested in separate projects to ensure modularity and ease of integration. The development process involves the use of Web Components, which encapsulate the functionality and styling of each layer type into reusable elements. This approach ensures consistency and compatibility across different parts of the application. For this plugin type we do not offer a test environment so we recommend to have a button for each required function and to show the result.</p>
+<h2 id="integration-with-web-components">Integration with Web Components</h2>
+<p>Web Components technology is utilized for the development of these custom layers, providing several benefits:</p>
+<ul>
+<li><strong>Encapsulation</strong>: Each layer type is developed as a self-contained component, making it easier to manage and maintain.</li>
+<li><strong>Reusability</strong>: Components can be reused across different projects or instances of the application, promoting consistency and reducing development time.</li>
+<li><strong>Interoperability</strong>: Web Components ensure that custom layers can seamlessly integrate with other parts of the application, regardless of the underlying framework or technology stack.</li>
+</ul>
+<p>Setting Up a New Layer Type
+The steps are similar to Tools plugins, so these are also based on Web Components. For parameter selection, we offer a toolbar at the top. Each layer type needs an additional web component for dialog elements of such a toolbar with the suffix <code>-toolbar</code></p>
+<pre class="code">
+<code class="language-html"><span class="meta tag custom html"><span class="punctuation definition tag begin html">&lt;</span><span class="entity name tag custom html">fds-image-editor-text</span> <span class="meta attribute-with-value html"><span class="entity other attribute-name html">layer</span><span class="punctuation separator key-value html">=</span></span><span class="meta attribute-with-value html"><span class="string unquoted html">{layer}</span></span><span class="punctuation definition tag end html">&gt;</span></span><span class="meta tag custom html"><span class="punctuation definition tag begin html">&lt;/</span><span class="entity name tag custom html">fds-image-editor-text</span><span class="punctuation definition tag end html">&gt;</span></span>
+<span class="meta tag custom html"><span class="punctuation definition tag begin html">&lt;</span><span class="entity name tag custom html">fds-image-editor-text-toolbar</span> <span class="meta attribute-with-value html"><span class="entity other attribute-name html">layer</span><span class="punctuation separator key-value html">=</span></span><span class="meta attribute-with-value html"><span class="string unquoted html">{layer}</span></span><span class="punctuation definition tag end html">&gt;</span></span><span class="meta tag custom html"><span class="punctuation definition tag begin html">&lt;/</span><span class="entity name tag custom html">fds-image-editor-text-toolbar</span><span class="punctuation definition tag end html">&gt;</span></span>
+</code></pre>
+<p>The <code>layer</code> parameter points to an internal data object storing all information of the  layer. Both components are used automatically by addding  a new layer in the add layer menu (+). </p>
+<p>Both components need to provide a refresh() function which will be automatically called if something has been changed in the main application. </p>
+<h1 id="layer-plugin-functions-in-main-web-component">Layer Plugin Functions in Main Web Component</h1>
+<p>To ensure seamless integration and functionality of layer plugins in our AI image editing application, each plugin must implement the following functions in the main web component. These functions are essential for preparing layers for AI processing, adding new layers, saving and loading layer data, and more.</p>
+<h2 id="required-functions">Required Functions</h2>
+<h3 id="1-prepareforai-resultlayer">1. prepareForAI(resultLayer)</h3>
+<ul>
+<li><strong>Description</strong>: Prepares the layer for AI processing.</li>
+<li><strong>Parameters</strong>: 
+<ul>
+<li><code>resultLayer</code>: The layer that will be added after AI generation.</li>
+</ul>
+</li>
+<li><strong>Functionality</strong>: Modify the <code>generate</code> subobject for any necessary data and update the <code>SpecialLayers</code> array for adding ControlNet data.</li>
+<li><strong>Notes</strong>: This is an asynchronous function.</li>
+</ul>
+<pre class="code">
+<code class="language-javascript"><span class="meta function declaration js"><span class="storage type js">async</span> <span class="storage type function js">function</span> <span class="entity name function js">prepareForAI</span><span class="punctuation section group begin js">(</span><span class="variable parameter function js">resultLayer</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Implementation here
+</span><span class="punctuation section block js">}</span></span>
+</code></pre>
+<h3 id="2-addlayer-newlayer">2. addLayer(newLayer)</h3>
+<ul>
+<li><strong>Description</strong>: Adds a new layer to the document.</li>
+<li><strong>Parameters</strong>: 
+<ul>
+<li><code>newLayer</code>: An empty layer with the size of the current document.</li>
+</ul>
+</li>
+<li><strong>Functionality</strong>: Fill <code>newLayer</code> with initial required default data.</li>
+</ul>
+<pre class="code">
+<code class="language-javascript"><span class="meta function declaration js"><span class="storage type function js">function</span> <span class="entity name function js">addLayer</span><span class="punctuation section group begin js">(</span><span class="variable parameter function js">newLayer</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Implementation here
+</span><span class="punctuation section block js">}</span></span>
+</code></pre>
+<h3 id="3-prepareforsave">3. prepareForSave()</h3>
+<ul>
+<li><strong>Description</strong>: Prepares the layer for saving in a <code>.gyre</code> document.</li>
+<li><strong>Functionality</strong>: Handle binary data by converting it to a non-binary format using the <code>data</code> parameter. The data will be stored with the result of <code>getScene()</code>. After loading a new document, the layer will be added to the DOM tree and the main application will call <code>setScene</code> with the data value.</li>
+<li><strong>Notes</strong>: This is an asynchronous function.</li>
+</ul>
+<pre class="code">
+<code class="language-javascript"><span class="meta function declaration js"><span class="storage type js">async</span> <span class="storage type function js">function</span> <span class="entity name function js">prepareForSave</span><span class="punctuation section group begin js">(</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Implementation here
+</span><span class="punctuation section block js">}</span></span>
+</code></pre>
+<h3 id="4-getlayermenuhtml-l-thumbclass-thumbstyle">4. getLayerMenuHTML(l, thumbClass, thumbStyle)</h3>
+<ul>
+<li><strong>Description</strong>: Provides the HTML for the layer menu on Desktop and iPad.</li>
+<li><strong>Parameters</strong>: 
+<ul>
+<li><code>l</code>: The layer.</li>
+<li><code>thumbClass</code>: The class for the thumbnail.</li>
+<li><code>thumbStyle</code>: The style for the thumbnail.</li>
+</ul>
+</li>
+<li><strong>Functionality</strong>: Generate a thumbnail preview of the layer or an icon.</li>
+</ul>
+<pre class="code">
+<code class="language-javascript"><span class="meta function declaration js"><span class="storage type function js">function</span> <span class="entity name function js">getLayerMenuHTML</span><span class="punctuation section group begin js">(</span><span class="variable parameter function js">l</span><span class="punctuation separator parameter function js">,</span> <span class="variable parameter function js">thumbClass</span><span class="punctuation separator parameter function js">,</span> <span class="variable parameter function js">thumbStyle</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Implementation here
+</span><span class="punctuation section block js">}</span></span>
+</code></pre>
+<h3 id="5-quickmask">5. quickMask()</h3>
+<ul>
+<li><strong>Description</strong>: Provides an automatic mask for inpainting operations.</li>
+<li><strong>Functionality</strong>: This function is called from the “Auto” function in the inpainting brush tool.</li>
+</ul>
+<pre class="code">
+<code class="language-javascript"><span class="meta function declaration js"><span class="storage type function js">function</span> <span class="entity name function js">quickMask</span><span class="punctuation section group begin js">(</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Implementation here
+</span><span class="punctuation section block js">}</span></span>
+</code></pre>
+<h3 id="6-getscene-and-setscene-sceneinfo">6. getScene() and setScene(sceneInfo)</h3>
+<ul>
+<li><strong>Description</strong>: Serialize and deserialize layer data.</li>
+<li><strong>Functionality</strong>: Convert binary data to a non-binary format and vice-versa. The result from <code>getScene</code> will be stored in the <code>data</code> parameter of the layer object in the main application for saving <code>.gyre</code> files.</li>
+</ul>
+<pre class="code">
+<code class="language-javascript"><span class="meta function declaration js"><span class="storage type function js">function</span> <span class="entity name function js">getScene</span><span class="punctuation section group begin js">(</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Implementation here
+</span><span class="punctuation section block js">}</span></span>
+
+<span class="meta function declaration js"><span class="storage type function js">function</span> <span class="entity name function js">setScene</span><span class="punctuation section group begin js">(</span><span class="variable parameter function js">sceneInfo</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Implementation here
+</span><span class="punctuation section block js">}</span></span>
+</code></pre>
+<h3 id="7-refresh">7. refresh()</h3>
+<ul>
+<li><strong>Description</strong>: Automatically called when something changes in the main application.</li>
+<li><strong>Functionality</strong>: Refresh the layer to reflect changes.</li>
+</ul>
+<pre class="code">
+<code class="language-javascript"><span class="meta function declaration js"><span class="storage type function js">function</span> <span class="entity name function js">refresh</span><span class="punctuation section group begin js">(</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Implementation here
+</span><span class="punctuation section block js">}</span></span>
+</code></pre>
+<p>Implementing these functions ensures that your layer plugins will integrate smoothly with the main web component of our AI image editing application. These functions handle various aspects of layer management, including AI preparation, adding new layers, saving and loading data, generating layer menus, and refreshing layers. Make sure each function is properly implemented to maintain the application’s performance and user experience.</p>
+<h1 id="manifest-structure">Manifest Structure</h1>
+<p>The manifest structure for layer plugins is crucial for defining the properties and functionalities of each layer type within our AI image editing application. Below is the detailed explanation of each property in the manifest structure.</p>
+<h3 id="example-manifest">Example Manifest</h3>
+<pre class="code">
+<code class="language-json"><span class="meta structure dictionary json"><span class="punctuation section dictionary begin json">{</span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>type<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>layer<span class="punctuation definition string end json">&quot;</span></span><span class="punctuation separator dictionary pair json">,</span></span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>title<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>Text<span class="punctuation definition string end json">&quot;</span></span><span class="punctuation separator dictionary pair json">,</span></span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>controlNet<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="constant language json">true</span><span class="punctuation separator dictionary pair json">,</span></span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>quickMask<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="constant language json">true</span><span class="punctuation separator dictionary pair json">,</span></span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>moveTool<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="constant language json">true</span><span class="punctuation separator dictionary pair json">,</span></span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>convertToImage<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="constant language json">true</span><span class="punctuation separator dictionary pair json">,</span></span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>letter<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>T<span class="punctuation definition string end json">&quot;</span></span><span class="punctuation separator dictionary pair json">,</span></span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>images<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="meta structure dictionary json"><span class="punctuation section dictionary begin json">{</span>
+    <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>largeIcon<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>/node_modules/@fds-components/fds-image-editor-text/dist/img/text_source.jpg<span class="punctuation definition string end json">&quot;</span></span><span class="punctuation separator dictionary pair json">,</span></span>
+    <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>largeIconHover<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>/node_modules/@fds-components/fds-image-editor-text/dist/img/text_result.jpg<span class="punctuation definition string end json">&quot;</span></span>
+  </span><span class="punctuation section dictionary end json">}</span></span>
+</span><span class="punctuation section dictionary end json">}</span></span>
+</code></pre>
+<h3 id="properties">Properties</h3>
+<ul>
+<li>
+<p><strong>type</strong>: Specifies the type of the layer. This should always be set to <code>&quot;layer&quot;</code> for layer plugins.</p>
+</li>
+<li>
+<p><strong>title</strong>: The title of the layer, which will be displayed in the user interface.</p>
+</li>
+<li>
+<p><strong>controlNet</strong>: A boolean value indicating whether the layer supports ControlNet functionalities.</p>
+</li>
+<li>
+<p><strong>quickMask</strong>: A boolean value indicating whether the layer provides an automatic mask for inpainting operations.</p>
+</li>
+<li>
+<p><strong>moveTool</strong>: A boolean value indicating whether the contents of the layer can be moved around and resized.</p>
+</li>
+<li>
+<p><strong>convertToImage</strong>: A boolean value indicating whether the layer can be converted to a normal image layer.</p>
+</li>
+<li>
+<p><strong>letter</strong>: A single letter representing the layer in the layer menu.</p>
+</li>
+<li>
+<p><strong>images</strong>: An object containing the paths to images required for the “Add Layer” menu.</p>
+<ul>
+<li><strong>largeIcon</strong>: The path to the large icon image for the layer.</li>
+<li><strong>largeIconHover</strong>: The path to the hover state large icon image for the layer.</li>
+</ul>
+</li>
+</ul>
+<h3 id="example-usage">Example Usage</h3>
+<p>When defining a new layer plugin, ensure that the manifest structure includes all the required properties as shown in the example above. This manifest will enable the main application to correctly identify and handle the layer, providing the appropriate tools and functionalities to the user.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The manifest structure is essential for the correct integration of layer plugins in our AI image editing application. By defining properties such as <code>type</code>, <code>title</code>, <code>controlNet</code>, <code>quickMask</code>, <code>moveTool</code>, <code>convertToImage</code>, <code>letter</code>, and <code>images</code>, developers can ensure their plugins are recognized and function as expected within the application.</p>
+</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#custom-layer-types">Custom Layer Types</a></li><li class="page-nav-level-2"><a href="#overview">Overview</a></li><li class="page-nav-level-2"><a href="#features">Features</a></li><li class="page-nav-level-3"><a href="#3d-layers">3D Layers</a></li><li class="page-nav-level-3"><a href="#pose-layers">Pose Layers</a></li><li class="page-nav-level-3"><a href="#text-layers">Text Layers</a></li><li class="page-nav-level-3"><a href="#potential-future-layers">Potential Future Layers</a></li><li class="page-nav-level-2"><a href="#data-sources">Data Sources</a></li><li class="page-nav-level-2"><a href="#development-and-testing">Development and Testing</a></li><li class="page-nav-level-2"><a href="#integration-with-web-components">Integration with Web Components</a></li><li class="page-nav-level-1"><a href="#layer-plugin-functions-in-main-web-component">Layer Plugin Functions in Main Web Component</a></li><li class="page-nav-level-2"><a href="#required-functions">Required Functions</a></li><li class="page-nav-level-3"><a href="#1-prepareforai-resultlayer">1. prepareForAI(resultLayer)</a></li><li class="page-nav-level-3"><a href="#2-addlayer-newlayer">2. addLayer(newLayer)</a></li><li class="page-nav-level-3"><a href="#3-prepareforsave">3. prepareForSave()</a></li><li class="page-nav-level-3"><a href="#4-getlayermenuhtml-l-thumbclass-thumbstyle">4. getLayerMenuHTML(l, thumbClass, thumbStyle)</a></li><li class="page-nav-level-3"><a href="#5-quickmask">5. quickMask()</a></li><li class="page-nav-level-3"><a href="#6-getscene-and-setscene-sceneinfo">6. getScene() and setScene(sceneInfo)</a></li><li class="page-nav-level-3"><a href="#7-refresh">7. refresh()</a></li><li class="page-nav-level-1"><a href="#manifest-structure">Manifest Structure</a></li><li class="page-nav-level-3"><a href="#example-manifest">Example Manifest</a></li><li class="page-nav-level-3"><a href="#properties">Properties</a></li><li class="page-nav-level-3"><a href="#example-usage">Example Usage</a></li><li class="page-nav-level-2"><a href="#conclusion">Conclusion</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
+<script id="app.js" async defer type="text/javascript" src="/gyre-sdk/assets/app.f93b0a1c15e882d9.js"></script></body></html>
