@@ -23,13 +23,13 @@ Join our vibrant community on Discord, engage in developer sessions, and benefit
 
 ## Plugin Types
 
-| [UI Components](Plugin_Types/tools.md) | [Tools](Plugin_Types/tools.md) | [Special Layers](#) | [Brushes](#) |
+| [UI Components](Plugin_Types/ui_components.html) | [Tools](Plugin_Types/tools.html) | [Special Layers](#) | [Brushes](#) |
 | ------------------- | ---------- | ------------------- | ------------ |
 | Build and integrate custom user interface elements. | Develop new tools to extend Gyre's functionality. | Create and manage layers with specialized features. | Design custom brushes to enhance your image editing tasks. |
 
 ## Discover
 
-| [Gyre API](api.md) | [Icon Management](icon_management.md) | [Default UI Components](#) | [Gyre Plugins Development for Adobe UXP Developers](uxp.md) |
+| [Gyre API](API/api.html) | [Icon Management](icon_management.html) | [Default UI Components](#) | [Gyre Plugins Development for Adobe UXP Developers](uxp.html) |
 | ------------- | -------------------- | -------------------------- | ----------------------------------------------- |
 | Explore the extensive API for powerful and flexible integrations. | Manage and customize icons within your plugins. | Utilize built-in UI components to streamline development. | Transition your skills from Adobe UXP to Gyre. |
 | [Plugin Samples](#) | | | |

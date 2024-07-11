@@ -210,7 +210,7 @@ The manifest structure for layer plugins is crucial for defining the properties 
 - **letter**: A single letter representing the layer in the layer menu.
 
 - **images**: An object containing the paths to images required for the "Add Layer" menu.
-  - **largeIcon**: The path to the large icon image for the layer.
+  - **largeIcon**: The path to the large icon image for the layer (required).
   - **largeIconHover**: The path to the hover state large icon image for the layer.
 
 

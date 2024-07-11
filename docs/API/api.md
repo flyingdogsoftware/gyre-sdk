@@ -1,5 +1,5 @@
 # Gyre API
-![Gyre API](api.png)
+![Gyre API](../api.png)
 
 The `gyre` API is accessible via `globalThis.gyre` and provides various parameters, functions, and APIs to interact with the current open document, handle layers, manage dialogs, and more in a ComfyUI/Gyre installation.
 
@@ -20,6 +20,8 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
 ### Mask Manager
 
 - **maskManager**: API for handling image mask data.
+  - **loadMask**: loads mask pixel data - it needs image URL (usually it is base64 image URL) as the only parameter. 
+
 
 ### Open Dialog
 
@@ -27,7 +29,11 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
 
 ### Image API
 
-- **imageAPI**: Functions handling image data.
+- **imageAPI**: Functions handling image data. See [imageAPI](imageapi.html) documentation.
+
+### layerManager API
+
+- **layerManager**: Functions handling layers of canvas like adding or deleting layers. See [layerManager](layermanager.html) documentation.
 
 ### Palette Values
 
