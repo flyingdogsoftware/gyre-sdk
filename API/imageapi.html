@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>ImageAPI Documentation</title><meta name="description" content="Documentation for ImageAPI Documentation"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1720730869";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li><a href="/gyre-sdk/icon_management">Icon Management</a></li><li><a href="/gyre-sdk/uxp">Gyre Plugins Development for Adobe UXP Developers</a></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li></ul></details></li><li class="nested"><details><summary><span>Gyre API</span></summary><ul><li><a href="/gyre-sdk/API/api">Gyre API</a></li><li><a href="/gyre-sdk/API/imageapi">ImageAPI Documentation</a></li><li><a href="/gyre-sdk/API/layermanager">layerManager API</a></li></ul></details></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="imageapi-documentation">ImageAPI Documentation</h1>
+<p>The <code>ImageAPI</code> provides a set of asynchronous functions to manipulate images using HTML canvas. The API supports various operations such as color adjustments, scaling, and combining image layers. Below is the detailed documentation of each function available in the <code>ImageAPI</code>.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="setcolorpreservealpha"><code>setColorPreserveAlpha</code></h3>
+<p>Sets the color of an image while preserving its alpha channel.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>url</strong>: <code>string</code> - The URL of the image.</li>
+<li><strong>r</strong>: <code>number</code> - The red component of the new color.</li>
+<li><strong>g</strong>: <code>number</code> - The green component of the new color.</li>
+<li><strong>b</strong>: <code>number</code> - The blue component of the new color.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves when the color change is applied.</li>
+</ul>
+<h3 id="base64tocanvas"><code>base64ToCanvas</code></h3>
+<p>Converts a base64 encoded image to an HTML canvas element.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>base64</strong>: <code>string</code> - The base64 encoded image string.</li>
+<li><strong>width</strong>: <code>number</code> - The width of the canvas.</li>
+<li><strong>height</strong>: <code>number</code> - The height of the canvas.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the canvas element.</li>
+</ul>
+<h3 id="getimagedatacombined"><code>getImageDataCombined</code></h3>
+<p>Retrieves image data from multiple layers within a bounding box and optionally merges the alpha channel from a mask.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>layers</strong>: <code>Array</code> - The layers from which to retrieve image data.</li>
+<li><strong>x</strong>: <code>number</code> - The x-coordinate of the bounding box.</li>
+<li><strong>y</strong>: <code>number</code> - The y-coordinate of the bounding box.</li>
+<li><strong>width</strong>: <code>number</code> - The width of the bounding box.</li>
+<li><strong>height</strong>: <code>number</code> - The height of the bounding box.</li>
+<li><strong>document</strong>: <code>Object</code> - An object containing the width and height of the document.</li>
+<li><strong>maskCanvas</strong>: <code>Canvas</code> (optional) - The canvas element containing the mask alpha channel.</li>
+<li><strong>ignoreType</strong>: <code>boolean</code> (optional) - If true, layer types are ignored.</li>
+<li><strong>ignoreSubType</strong>: <code>boolean</code> (optional) - If true, layer subtypes are ignored.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the base64 encoded image data.</li>
+</ul>
+<h3 id="scaleimagecanvas"><code>scaleImageCanvas</code></h3>
+<p>Scales an image using an HTML canvas element.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>url</strong>: <code>string</code> - The URL of the image.</li>
+<li><strong>width</strong>: <code>number</code> - The target width of the scaled image.</li>
+<li><strong>height</strong>: <code>number</code> - The target height of the scaled image.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the base64 encoded scaled image.</li>
+</ul>
+<h3 id="getimagesize"><code>getImageSize</code></h3>
+<p>Retrieves the dimensions of an image.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>url</strong>: <code>string</code> - The URL of the image.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with an object containing the width and height of the image.</li>
+</ul>
+<h3 id="adjustdimensions"><code>adjustDimensions</code></h3>
+<p>Calculates image dimensions to fit within a maximum size and be divisible by a specified divider.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>maxWidth</strong>: <code>number</code> - The maximum width.</li>
+<li><strong>maxHeight</strong>: <code>number</code> - The maximum height.</li>
+<li><strong>targetWidth</strong>: <code>number</code> - The target width.</li>
+<li><strong>targetHeight</strong>: <code>number</code> - The target height.</li>
+<li><strong>devider</strong>: <code>number</code> (optional) - The divider for the dimensions (default is 64).</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with an object containing the adjusted width and height.</li>
+</ul>
+<h3 id="fillimagebackground"><code>fillImageBackground</code></h3>
+<p>Fills the transparent parts of an image with a specified color.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>url</strong>: <code>string</code> - The URL of the image.</li>
+<li><strong>color</strong>: <code>string</code> - The color to fill the transparent parts with.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the base64 encoded image with the filled background.</li>
+</ul>
+<h3 id="canvasmaketransparentwhite"><code>canvasMakeTransparentWhite</code></h3>
+<p>Makes the transparent parts in the alpha channel of a canvas white.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>canvas</strong>: <code>Canvas</code> - The canvas element to modify.</li>
+</ul>
+<h3 id="canvasinvert"><code>canvasInvert</code></h3>
+<p>Inverts the colors of an image on a canvas.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>canvas</strong>: <code>Canvas</code> - The canvas element to modify.</li>
+</ul>
+<h3 id="canvasexpandmaskfast"><code>canvasExpandMaskFast</code></h3>
+<p>Performs auto dilation on a mask with a fixed size and returns a new canvas.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>canvas</strong>: <code>Canvas</code> - The canvas element containing the mask.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the new canvas element.</li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<pre class="code">
+<code class="language-javascript"><span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Example of how to use the setColorPreserveAlpha function
+</span><span class="variable other object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta property object js">imageAPI</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">setColorPreserveAlpha</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image_url<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="constant numeric js">255</span><span class="punctuation separator comma js">,</span> <span class="constant numeric js">0</span><span class="punctuation separator comma js">,</span> <span class="constant numeric js">0</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
+    <span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">then</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="meta function declaration js"><span class="punctuation section group begin js">(</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span><span class="storage type function arrow js">=&gt;</span></span> <span class="meta block js"><span class="punctuation section block js">{</span>
+        <span class="meta function-call method js"><span class="support type object console js">console</span><span class="punctuation accessor js">.</span><span class="support function console js">log</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>Color set successfully<span class="punctuation definition string end js">&#39;</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+    <span class="punctuation section block js">}</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
+    <span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">catch</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="meta function declaration js"><span class="variable parameter function js">err</span> <span class="storage type function arrow js">=&gt;</span></span> <span class="meta block js"><span class="punctuation section block js">{</span>
+        <span class="meta function-call method js"><span class="support type object console js">console</span><span class="punctuation accessor js">.</span><span class="support function console js">error</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>Error setting color:<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="variable other readwrite js">err</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+    <span class="punctuation section block js">}</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+
+<span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Example of how to use the getImageSize function
+</span><span class="variable other object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta property object js">imageAPI</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">getImageSize</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image_url<span class="punctuation definition string end js">&#39;</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
+    <span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">then</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="meta function declaration js"><span class="variable parameter function js">size</span> <span class="storage type function arrow js">=&gt;</span></span> <span class="meta block js"><span class="punctuation section block js">{</span>
+        <span class="meta function-call method js"><span class="support type object console js">console</span><span class="punctuation accessor js">.</span><span class="support function console js">log</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>Image size:<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="variable other readwrite js">size</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+    <span class="punctuation section block js">}</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
+    <span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">catch</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="meta function declaration js"><span class="variable parameter function js">err</span> <span class="storage type function arrow js">=&gt;</span></span> <span class="meta block js"><span class="punctuation section block js">{</span>
+        <span class="meta function-call method js"><span class="support type object console js">console</span><span class="punctuation accessor js">.</span><span class="support function console js">error</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>Error getting image size:<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="variable other readwrite js">err</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+    <span class="punctuation section block js">}</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+</code></pre>
+<p>This documentation provides a comprehensive overview of the <code>ImageAPI</code> functions, their parameters, and expected returns, enabling developers to effectively utilize the API for image manipulation tasks.</p>
+</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#imageapi-documentation">ImageAPI Documentation</a></li><li class="page-nav-level-2"><a href="#functions">Functions</a></li><li class="page-nav-level-3"><a href="#setcolorpreservealpha">setColorPreserveAlpha</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#base64tocanvas">base64ToCanvas</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getimagedatacombined">getImageDataCombined</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#scaleimagecanvas">scaleImageCanvas</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getimagesize">getImageSize</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#adjustdimensions">adjustDimensions</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#fillimagebackground">fillImageBackground</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#canvasmaketransparentwhite">canvasMakeTransparentWhite</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#canvasinvert">canvasInvert</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#canvasexpandmaskfast">canvasExpandMaskFast</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-2"><a href="#example-usage">Example Usage</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
+<script id="app.js" async defer type="text/javascript" src="/gyre-sdk/assets/app.f93b0a1c15e882d9.js"></script></body></html>
