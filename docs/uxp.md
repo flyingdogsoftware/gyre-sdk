@@ -7,7 +7,7 @@
 | ------------------------------ | --------------------------- | ---------------------------- |
 | iPad support                   | X                           | -                            |
 | Web Support                    | X                           | -                            |
-| Standalone application support | X                           | X                            |
+| Standalone application support | -                           | X                            |
 | UI Components                  | FDS Image Editor Components | Adobe Spektrum Components    |
 | Actions                        | -                           | X                            |
 | Workflows (ComfyUI)            | X                           | -                            |
