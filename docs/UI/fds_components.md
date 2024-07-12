@@ -171,3 +171,75 @@ Below is a complete example of using the `<fds-local-files>` component in headle
 - The `load3D` function is executed when the file is loaded, allowing you to handle the binary file data.
 
 This setup allows for a clean and user-friendly interface where file loading is initiated through a button, while the actual file input element remains hidden.
+
+
+
+
+## `<fds-image-editor-slider>`
+
+This component represents a slider input that can be adjusted within a specified range. The slider can be configured to be vertical or horizontal.
+
+### Parameters
+
+- **min**: `string` - The minimum value of the slider.
+- **max**: `string` - The maximum value of the slider.
+- **vertical**: `boolean` - If `true`, the slider is displayed vertically.
+- **on:input**: `function` - Event handler for the input event, triggered when the slider value changes.
+- **value**: `number` - The current value of the slider.
+
+With `window.fds_device = 'iPad'` globally iPad slider design is activated.
+
+### Usage
+
+```html
+<fds-image-editor-slider
+    min="2"
+    max="200"
+    vertical="true"
+    on:input={(e) => {
+        let newValue = e.target.value;
+        // Handle the new value
+    }}
+    value={currentValue}
+/>
+```
+
+### Example Usage
+
+Below is a complete example of using the `<fds-image-editor-slider>` component with a vertical orientation and handling the input event.
+
+```html
+<script>
+    let currentValue = 50;
+
+    function handleInput(event) {
+        currentValue = event.target.value;
+        // Additional logic to handle the slider value change
+    }
+</script>
+
+<fds-image-editor-slider
+    min="2"
+    max="200"
+    vertical="true"
+    on:input={handleInput}
+    value={currentValue}
+/>
+```
+
+### Explanation
+
+- The `min` parameter sets the minimum value of the slider.
+- The `max` parameter sets the maximum value of the slider.
+- The `vertical` parameter, when set to `true`, displays the slider vertically.
+- The `on:input` parameter binds an event handler to the input event, which is triggered whenever the slider value changes.
+- The `value` parameter sets the current value of the slider.
+
+This component allows for intuitive adjustment of values within a specified range, with support for both vertical and horizontal orientations.
+
+
+
+<img src="../slider.png" width="400">
+
+Same slider on iPad and desktop
+
