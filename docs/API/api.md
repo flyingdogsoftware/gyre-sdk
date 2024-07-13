@@ -29,11 +29,11 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
 
 ### Image API
 
-- **imageAPI**: Functions handling image data. See [imageAPI](imageapi) documentation.
+- **imageAPI**: Functions handling image data. See [imageAPI](/API/imageapi) documentation.
 
 ### layerManager API
 
-- **layerManager**: Functions handling layers of canvas like adding or deleting layers. See [layerManager](layermanager) documentation.
+- **layerManager**: Functions handling layers of canvas like adding or deleting layers. See [layerManager](/API/layermanager) documentation.
 
 ### Palette Values
 

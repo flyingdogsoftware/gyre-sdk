@@ -135,7 +135,7 @@ Here is an example of a JSON manifest for two components:
 
 ## Gyre API
 
-Have a look at the Gyre API for documentation of the global API which is available [here](../API/api). For that special component type, there are two individual parameters:
+Have a look at the Gyre API for documentation of the global API which is available [here](/API/api). For that special component type, there are two individual parameters:
 
 - `globalThis.gyre.workflowId` is set to the workflow-ID of the current open form.
 - `formElements`: form elements of the open form including current values.
