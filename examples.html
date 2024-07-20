@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Gyre SDK Examples</title><meta name="description" content="Documentation for Gyre SDK Examples"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1721513255";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    body {
+--font-family:  "Figtree", sans-serif;
+--font-size: 19px;
+}
+nav a,
+nav span {
+  font-size: var(--font-size);
+}
+.docgen-content a {
+    font-size: var(--font-size);
+    text-decoration: none;
+
+}
+#search-results a {
+  font-size: var(--font-size);
+}
+
+p {
+  font-size: var(--font-size);
+}
+li {
+  font-size: var(--font-size);
+}
+
+p code,
+li code {
+
+  font-size: var(--font-size);
+}
+
+td {
+    font-size: var(--font-size);
+
+}
+.docgen-content {
+    max-width: 1280px;
+}
+
+.search {
+    max-width: 1280px;
+}
+
+
+</style></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><a href="/gyre-sdk/"><img src="/gyre-sdk/logo.png" alt="Gyre SDK logo"></a><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li><li><a href="/gyre-sdk/Plugin_Types/brushes">Brush Plugins</a></li></ul></details></li><li class="nested"><details><summary><span>Gyre API</span></summary><ul><li><a href="/gyre-sdk/API/api">Gyre API</a></li><li><a href="/gyre-sdk/API/imageapi">ImageAPI Documentation</a></li><li><a href="/gyre-sdk/API/layermanager">layerManager API</a></li></ul></details></li><li class="nested"><details><summary><span>UI</span></summary><ul><li><a href="/gyre-sdk/UI/fds_components">FDS Image Editor Components</a></li><li><a href="/gyre-sdk/UI/icon_management">Icon Management</a></li></ul></details></li><li><a href="/gyre-sdk/examples">Gyre SDK Examples</a></li><li><a href="/gyre-sdk/uxp">For Adobe UXP Developers</a></li><li><a href="/gyre-sdk/share">Share Your Plugin</a></li><li><a href="/gyre-sdk/community">Developer Community</a></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="gyre-sdk-examples">Gyre SDK Examples</h1>
+<p><img src="examples.png" alt="Examples" /></p>
+<p>Welcome to the <strong>Gyre SDK Examples</strong> page! Here you will find a collection of plugins and extensions developed using the Gyre SDK. These examples demonstrate the capabilities and integration of various components within the Gyre ecosystem.</p>
+<h2 id="example-plugins">Example Plugins</h2>
+<ul>
+<li>
+<p><strong><a href="https://github.com/flyingdogsoftware/fds-gradient-editor">Gradient-Editor</a>:</strong> A user interface component for editing color gradients. Perfect for creating and adjusting color transitions in your designs.</p>
+</li>
+<li>
+<p><strong><a href="https://github.com/flyingdogsoftware/fds-gradient-slider">Gradient-Slider</a>:</strong> A slider component that supports two handles. This slider is capable of splitting the value into multiple ComfyUI values for each handle (left and right), providing precise control over gradient adjustments.</p>
+</li>
+<li>
+<p><strong><a href="https://github.com/flyingdogsoftware/fds-image-editor-text">Image-Editor-Text</a>:</strong> A tools plugin for the Gyre application, allowing for the addition and manipulation of text within the image editor.</p>
+</li>
+<li>
+<p><strong><a href="https://github.com/flyingdogsoftware/fds-image-editor-sam">Image-Editor-SAM</a>:</strong> The SAM Tools Plugin for the Gyre application, offering specialized tools for advanced image editing capabilities.</p>
+</li>
+<li>
+<p><strong><a href="https://github.com/flyingdogsoftware/brush_Caligraphy">Brush-Calligraphy</a>:</strong> A calligraphy brush plugin for Gyre, enabling beautiful, artistic calligraphy strokes within the image editor.</p>
+</li>
+</ul>
+<h2 id="main-extensions">Main Extensions</h2>
+<ul>
+<li><strong><a href="https://github.com/flyingdogsoftware/gyre-extensions">Gyre Extensions</a>:</strong> This repository combines all the plugins into a comprehensive ComfyUI plugin. It serves as the main extension for integrating various components and plugins developed for the Gyre application.</li>
+</ul>
+<p>These examples are designed to help you understand how to develop and integrate your own plugins using the Gyre SDK. Each plugin is a standalone component that demonstrates specific functionalities and integration points within the Gyre application.</p>
+</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#gyre-sdk-examples">Gyre SDK Examples</a></li><li class="page-nav-level-2"><a href="#example-plugins">Example Plugins</a></li><li class="page-nav-level-2"><a href="#main-extensions">Main Extensions</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
+<script id="app.js" async defer type="text/javascript" src="/gyre-sdk/assets/app.f93b0a1c15e882d9.js"></script></body></html>
