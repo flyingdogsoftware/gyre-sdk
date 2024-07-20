@@ -1,7 +1,54 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Tools</title><meta name="description" content="Documentation for Tools"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
 <link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
 <link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
-<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1720898795";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><a href="/gyre-sdk/"><img src="/gyre-sdk/logo.png" alt="Gyre SDK logo"></a><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li><a href="/gyre-sdk/uxp">Gyre Plugins Development for Adobe UXP Developers</a></li><li class="nested"><details><summary><span>UI</span></summary><ul><li><a href="/gyre-sdk/UI/fds_components">FDS Image Editor Components</a></li><li><a href="/gyre-sdk/UI/icon_management">Icon Management</a></li></ul></details></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/brushes">Brush Plugins</a></li><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li></ul></details></li><li class="nested"><details><summary><span>Gyre API</span></summary><ul><li><a href="/gyre-sdk/API/api">Gyre API</a></li><li><a href="/gyre-sdk/API/imageapi">ImageAPI Documentation</a></li><li><a href="/gyre-sdk/API/layermanager">layerManager API</a></li></ul></details></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="tools">Tools</h1>
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1721513255";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    body {
+--font-family:  "Figtree", sans-serif;
+--font-size: 19px;
+}
+nav a,
+nav span {
+  font-size: var(--font-size);
+}
+.docgen-content a {
+    font-size: var(--font-size);
+    text-decoration: none;
+
+}
+#search-results a {
+  font-size: var(--font-size);
+}
+
+p {
+  font-size: var(--font-size);
+}
+li {
+  font-size: var(--font-size);
+}
+
+p code,
+li code {
+
+  font-size: var(--font-size);
+}
+
+td {
+    font-size: var(--font-size);
+
+}
+.docgen-content {
+    max-width: 1280px;
+}
+
+.search {
+    max-width: 1280px;
+}
+
+
+</style></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><a href="/gyre-sdk/"><img src="/gyre-sdk/logo.png" alt="Gyre SDK logo"></a><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li><li><a href="/gyre-sdk/Plugin_Types/brushes">Brush Plugins</a></li></ul></details></li><li class="nested"><details><summary><span>Gyre API</span></summary><ul><li><a href="/gyre-sdk/API/api">Gyre API</a></li><li><a href="/gyre-sdk/API/imageapi">ImageAPI Documentation</a></li><li><a href="/gyre-sdk/API/layermanager">layerManager API</a></li></ul></details></li><li class="nested"><details><summary><span>UI</span></summary><ul><li><a href="/gyre-sdk/UI/fds_components">FDS Image Editor Components</a></li><li><a href="/gyre-sdk/UI/icon_management">Icon Management</a></li></ul></details></li><li><a href="/gyre-sdk/examples">Gyre SDK Examples</a></li><li><a href="/gyre-sdk/uxp">For Adobe UXP Developers</a></li><li><a href="/gyre-sdk/share">Share Your Plugin</a></li><li><a href="/gyre-sdk/community">Developer Community</a></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="tools">Tools</h1>
 <p><img src="../tools.png" alt="Tools" /></p>
 <p>As research in the field of image and video editing progresses rapidly, new ideas and tools for manipulating and generating images are continually emerging. Frameworks like ComfyUI, while useful, often don’t cover all aspects comprehensively. Our platform provides a powerful environment not only for end users, such as artists and designers, but also for researchers and developers. It facilitates the quick implementation of innovative UI ideas, benefiting artists and designers by enhancing their creative processes and productivity. These tools are not limited to advanced AI features; they also include traditional image editing tools.</p>
 <img src="../tools2.png" >
@@ -87,16 +134,18 @@
 <p><code>canvas</code> is just the canvas object of the Gyre-API here.</p>
 <p>In addition to the <code>refresh</code> function, the tool has to provide <code>prepareForSave()</code> and <code>prepareAfterLoad()</code> functions. In a complex gyre file, the current state of each tool is stored as well, so these usually provide a serialized version of <code>toolsLayer</code> without unneeded data.</p>
 <h2 id="manifest">Manifest</h2>
-<p>This section provides detailed information about the JSON manifest structure for defining tools in your image editing plugin.</p>
+<p>This section provides detailed information about the JSON manifest structure for defining tools in your image editing plugin. The manifest is stored in <code>gyre_entry/gyre_ui_tools.json</code> in <code>plugins</code> array.</p>
 <h2 id="json-structure">JSON Structure</h2>
 <h3 id="root-object">Root Object</h3>
 <ul>
-<li><strong>type</strong> (string): The type of the plugin. Example: <code>&quot;tool&quot;</code>.</li>
+<li><strong>type</strong> (string): The type of the plugin. This must be <code>&quot;tool&quot;</code> for tool-plugins.</li>
+<li><strong>tag</strong>: The tag name of the main component. The dialog component will have <code>&quot;-floating-toolbar&quot;</code> added.</li>
+<li><strong>js_path</strong>: Path to the JS file with both tool components. Paths are defined relative to the Manifest file.</li>
 <li><strong>floatingToolBar</strong> (boolean): Specifies if the toolbar should float. Example: <code>true</code>.</li>
-<li><strong>floatingToolBarWidth</strong> (number): The width of the floating toolbar. Example: <code>490</code>.</li>
+<li><strong>floatingToolBarWidth</strong> (number): The width of the floating toolbar. Example: <code>490</code>. This will overwritten by sub-tool parameter for the toolbar width.</li>
 <li><strong>title</strong> (string): The title of the plugin. Example: <code>&quot;Auto Matte&quot;</code>.</li>
 <li><strong>layerTypes</strong> (array): An array of layer types the tool is applicable to. Example: <code>[&quot;image&quot;]</code>.</li>
-<li><strong>tools</strong> (array): An array of tool objects.</li>
+<li><strong>tools</strong> (array): An array of tool objects defining each sub-tool.</li>
 <li><strong>icons</strong> (object): An object containing icon definitions.</li>
 </ul>
 <h3 id="tool-object">Tool Object</h3>
@@ -122,6 +171,7 @@
   <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>floatingToolBar<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="constant language json">true</span><span class="punctuation separator dictionary pair json">,</span></span>
   <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>floatingToolBarWidth<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="constant numeric json">490</span><span class="punctuation separator dictionary pair json">,</span></span>
   <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>title<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>Auto Matte<span class="punctuation definition string end json">&quot;</span></span><span class="punctuation separator dictionary pair json">,</span></span>
+  <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>js_path<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>node_modules/@fds-components-public/fds-image-editor-sam/dist/fds-image-editor-sam.js<span class="punctuation definition string end json">&quot;</span></span><span class="punctuation separator dictionary pair json">,</span></span>
   <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>layerTypes<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="meta structure array json"><span class="punctuation section array begin json">[</span><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>image<span class="punctuation definition string end json">&quot;</span></span><span class="punctuation section array end json">]</span></span><span class="punctuation separator dictionary pair json">,</span></span>
   <span class="meta structure dictionary key json"><span class="string quoted double json"><span class="punctuation definition string begin json">&quot;</span>tools<span class="punctuation definition string end json">&quot;</span></span></span><span class="meta structure dictionary value json"><span class="punctuation separator dictionary key-value json">:</span> <span class="meta structure array json"><span class="punctuation section array begin json">[</span>
     <span class="meta structure dictionary json"><span class="punctuation section dictionary begin json">{</span>

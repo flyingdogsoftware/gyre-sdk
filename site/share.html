@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Share Your Plugin</title><meta name="description" content="Documentation for Share Your Plugin"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1721513255";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    body {
+--font-family:  "Figtree", sans-serif;
+--font-size: 19px;
+}
+nav a,
+nav span {
+  font-size: var(--font-size);
+}
+.docgen-content a {
+    font-size: var(--font-size);
+    text-decoration: none;
+
+}
+#search-results a {
+  font-size: var(--font-size);
+}
+
+p {
+  font-size: var(--font-size);
+}
+li {
+  font-size: var(--font-size);
+}
+
+p code,
+li code {
+
+  font-size: var(--font-size);
+}
+
+td {
+    font-size: var(--font-size);
+
+}
+.docgen-content {
+    max-width: 1280px;
+}
+
+.search {
+    max-width: 1280px;
+}
+
+
+</style></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><a href="/gyre-sdk/"><img src="/gyre-sdk/logo.png" alt="Gyre SDK logo"></a><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li><li><a href="/gyre-sdk/Plugin_Types/brushes">Brush Plugins</a></li></ul></details></li><li class="nested"><details><summary><span>Gyre API</span></summary><ul><li><a href="/gyre-sdk/API/api">Gyre API</a></li><li><a href="/gyre-sdk/API/imageapi">ImageAPI Documentation</a></li><li><a href="/gyre-sdk/API/layermanager">layerManager API</a></li></ul></details></li><li class="nested"><details><summary><span>UI</span></summary><ul><li><a href="/gyre-sdk/UI/fds_components">FDS Image Editor Components</a></li><li><a href="/gyre-sdk/UI/icon_management">Icon Management</a></li></ul></details></li><li><a href="/gyre-sdk/examples">Gyre SDK Examples</a></li><li><a href="/gyre-sdk/uxp">For Adobe UXP Developers</a></li><li><a href="/gyre-sdk/share">Share Your Plugin</a></li><li><a href="/gyre-sdk/community">Developer Community</a></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="share-your-plugin">Share Your Plugin</h1>
+<p><img src="share.png" alt="Share" /></p>
+<p>Welcome to the <strong>Share Your Plugin</strong> section of the Gyre SDK documentation. Here, you’ll learn how to distribute your plugins and share them with the Gyre community.</p>
+<h2 id="distributing-your-plugins">Distributing Your Plugins</h2>
+<p>To distribute your plugins, we use the ComfyUI Manager. The ComfyUI Manager helps in managing and distributing Gyre plugins, along with optional ComfyUI nodes, workflows, and AI models. This makes it easy for other users to find and use your plugins within the Gyre application.</p>
+<h3 id="what-is-comfyui-manager">What is ComfyUI Manager?</h3>
+<p>The ComfyUI Manager is a tool that facilitates the distribution of ComfyUI extensions, which include Gyre plugins. It allows you to package your plugins and any additional resources (such as nodes, workflows, and AI models) into a single extension that can be easily managed and distributed.</p>
+<h3 id="how-to-distribute-your-plugins-using-comfyui-manager">How to Distribute Your Plugins Using ComfyUI Manager</h3>
+<ol>
+<li>
+<p><strong>Prepare Your Plugin:</strong></p>
+<ul>
+<li>Ensure your plugin is fully functional and well-documented.</li>
+<li>Package any additional resources (nodes, workflows, AI models) that are required for your plugin.</li>
+</ul>
+</li>
+<li>
+<p><strong>Package Your Plugin:</strong></p>
+<ul>
+<li>Follow the guidelines provided by the ComfyUI Manager to package your plugin and additional resources into a ComfyUI extension.</li>
+</ul>
+</li>
+<li>
+<p><strong>Submit Your Plugin:</strong></p>
+<ul>
+<li>Once your plugin is published as a GitHub project, you can submit it to the Gyre community through the ComfyUI Manager as a ComfyUI extension.</li>
+</ul>
+</li>
+</ol>
+<h3 id="learn-more-about-comfyui-manager">Learn More About ComfyUI Manager</h3>
+<p>For detailed instructions on how to use the ComfyUI Manager, read the official documentation <a href="https://github.com/ltdrdata/ComfyUI-Manager">here</a>.</p>
+<p>By following these steps, you can ensure that your plugins are easily accessible to the Gyre community, allowing others to benefit from your work and contribute to the growing ecosystem of Gyre plugins.</p>
+</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#share-your-plugin">Share Your Plugin</a></li><li class="page-nav-level-2"><a href="#distributing-your-plugins">Distributing Your Plugins</a></li><li class="page-nav-level-3"><a href="#what-is-comfyui-manager">What is ComfyUI Manager?</a></li><li class="page-nav-level-3"><a href="#how-to-distribute-your-plugins-using-comfyui-manager">How to Distribute Your Plugins Using ComfyUI Manager</a></li><li class="page-nav-level-3"><a href="#learn-more-about-comfyui-manager">Learn More About ComfyUI Manager</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
+<script id="app.js" async defer type="text/javascript" src="/gyre-sdk/assets/app.f93b0a1c15e882d9.js"></script></body></html>
