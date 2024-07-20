@@ -71,32 +71,39 @@ class SimpleBrush {
 ```
 
 
-# Manifest Documentation
+# Manifest
 
-The manifest is a JSON object that describes the properties and settings of a brush tool used in an application. Below is a detailed description of each field in the manifest, along with an example for clarity.
-
-## Manifest Structure
+The manifest is a JSON object stored in `gyre_entry/gyre_ui_brushes.json` in `plugins` array that describes the properties and settings of a brush tool used in an application. Below is a detailed description of each field in the manifest, along with an example for clarity.
 
 
 ## Fields
 
 ### `type`
-- **Description**: Specifies the type of tool.
+- **Description**: Specifies the type of tool. Must be "brush"`.
 - **Type**: `string`
-- **Example**: `"brush"`
+
+### `className`
+- **Description**: The class name of the brush following the structure as explained above.
+- **Type**: `string`
+- **Example**: `"brush_Caligraphy"`
 
 ### `title`
 - **Description**: The display name of the brush.
 - **Type**: `string`
 - **Example**: `"Caligraphy Brush"`
 
+### `js_path`
+- **Description**: Path to the JS file with brush class. Paths are defined relative to the Manifest file.
+- **Type**: `string`
+- **Example**: `"node_modules/@fds-components-public/fds-brush-caligraphy/dist/brush_Caligraphy.js"`
+
 ### `images`
-- **Description**: Contains paths to images associated with the brush.
+- **Description**: Contains paths to images associated with the brush. Paths are defined relative to the Manifest file.
 - **Type**: `object`
   - **largeIcon**
     - **Description**: Path to the large icon image shown in the brush tool menu and when selecting a brush. This field is required.
     - **Type**: `string`
-    - **Example**: `"appdata/brushes/img/brush_Caligraphy2.jpg"`
+    - **Example**: `"node_modules/@fds-components-public/fds-brush-caligraphy/dist/brush_Caligraphy2.jpg"`
 
 ### `form`
 - **Description**: Defines the configurable parameters of the brush. Currently, only the slider type is supported.
@@ -135,8 +142,9 @@ The manifest is a JSON object that describes the properties and settings of a br
 {
     "type": "brush",
     "title": "Caligraphy Brush",
+    "js_path": "node_modules/@fds-components-public/fds-brush-caligraphy/dist/brush_Caligraphy.js",
     "images": {
-        "largeIcon": "appdata/brushes/img/brush_Caligraphy2.jpg"
+        "largeIcon": "node_modules/@fds-components-public/fds-brush-caligraphy/dist/brush_Caligraphy2.jpg"
     },
     "form": {
         "spring": {

@@ -29,10 +29,10 @@ Join our vibrant community on Discord, engage in developer sessions, and benefit
 
 ## Discover
 
-| [Gyre API](API/api) | [Icon Management](UI/icon_management) | [Default UI Components](UI/fds_components) | [Gyre Plugins Development for Adobe UXP Developers](uxp) |
+| [Gyre API](API/api) | [Icon Management](UI/icon_management) | [Default UI Components](UI/fds_components) | [For Adobe UXP Developers](uxp) |
 | ------------- | -------------------- | -------------------------- | ----------------------------------------------- |
 | Explore the extensive API for powerful and flexible integrations. | Manage and customize icons within your plugins. | Utilize built-in UI components to streamline development. | Transition your skills from Adobe UXP to Gyre. |
-| [Plugin Samples](#) | | | |
+| [Plugin Samples](examples) | | | |
 | Access sample plugins to kickstart your development process. | | | |
 
 ## Share Your Plugin
@@ -43,7 +43,7 @@ Join our vibrant community on Discord, engage in developer sessions, and benefit
 
 ## Join the Community
 
-| [Join the Community](#) | | | |
+| [Join the Community](community) | | | |
 | ----------------------- | -| -| -|
 | Connect with other developers and users in the Gyre community through Discord and developer sessions. | | | |
 

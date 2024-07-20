@@ -1,4 +1,4 @@
-## Getting Started with the Gyre SDK
+# Getting Started with the Gyre SDK
 ![Getting Startet](start.png)
 
 Before implementing a plugin, please identify your focus. Here are the options:
@@ -23,12 +23,12 @@ The Gyre middleware scans all other extension folders for a subfolder named `gyr
 - **Image Canvas Tools**
 - **Custom Brushes**
 
-The main Gyre application loads these extensions through an initialization script from the ComfyUI server, which calls each extension's initialization scripts. Thus, the ComfyUI installation and extension mechanism are applicable, even though they are hosted on different servers.
+The main Gyre application loads all manifest definitions for these plugins from the ComfyUI extensions. Using the `js_path` parameter, it also loads the JavaScript files for each plugin. Consequently, the manifest files and the plugin executables are stored in separate locations.
 
 ## Setting Up Your Own Extension/Plugins
 
 1. Develop custom elements with their own tags using the Shadow DOM, ensuring they are isolated from the main application. Use a unique prefix to avoid conflicts (e.g., "yourname-yourcompany-gradient-slider" instead of "gradient-slider").
 2. Create your folder under `custom_nodes` like any other ComfyUI extension.
-3. Add a subfolder `gyre_entry` and include a JavaScript file named `gyre_init.js`. Load your extensions through this file.
-4. Include files like `gyre_ui_components.json`, `layers_components.json`, or `brushes.json` in the `gyre_entry` folder.
-5. Install node packages necessary for your custom tags.
+3. Add a subfolder `gyre_entry` and add manifest there.
+4. Bundle the JS executables with ComfyUI extension (usually as node modules in sub path below `gyre_entry`).
+

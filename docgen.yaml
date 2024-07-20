@@ -2,4 +2,19 @@
 title: "Gyre SDK"
 base_path: /gyre-sdk/
 logo: logo.png
-
+navigation:
+  - path: getting_started.md
+  - path: Plugin_Types
+    children: 
+    - path: Plugin_Types/tools.md
+    - path: Plugin_Types/layers.md
+    - path: Plugin_Types/ui_components.md
+    - path: Plugin_Types/brushes.md
+  - path: API
+    children: "*" 
+  - path: UI
+    children: "*"     
+  - path: examples.md 
+  - path: uxp.md
+  - path: share.md
+  - path: community.md

@@ -117,24 +117,26 @@ In addition to the `refresh` function, the tool has to provide `prepareForSave()
 
 ## Manifest
 
-This section provides detailed information about the JSON manifest structure for defining tools in your image editing plugin.
+This section provides detailed information about the JSON manifest structure for defining tools in your image editing plugin. The manifest is stored in `gyre_entry/gyre_ui_tools.json` in `plugins` array.
 
 ## JSON Structure
 
 ### Root Object
 
-- **type** (string): The type of the plugin. Example: `"tool"`.
+- **type** (string): The type of the plugin. This must be `"tool"` for tool-plugins.
+- **tag**: The tag name of the main component. The dialog component will have `"-floating-toolbar"` added.
+- **js_path**: Path to the JS file with both tool components. Paths are defined relative to the Manifest file.
 - **floatingToolBar** (boolean): Specifies if the toolbar should float. Example: `true`.
-- **floatingToolBarWidth** (number): The width of the floating toolbar. Example: `490`.
+- **floatingToolBarWidth** (number): The width of the floating toolbar. Example: `490`. This will overwritten by sub-tool parameter for the toolbar width.
 - **title** (string): The title of the plugin. Example: `"Auto Matte"`.
 - **layerTypes** (array): An array of layer types the tool is applicable to. Example: `["image"]`.
-- **tools** (array): An array of tool objects.
+- **tools** (array): An array of tool objects defining each sub-tool.
 - **icons** (object): An object containing icon definitions.
 
-### Tool Object
+### Tool Object 
 
 Each tool object has the following structure:
-
+  
 - **name** (string): The name of the tool. Example: `"rect"`.
 - **title** (string): The display title of the tool. Example: `"Rectangular Selection"`.
 - **icon** (string): The identifier for the tool's icon. Example: `"fds-image-editor-sam-rect"`.
@@ -158,6 +160,7 @@ Here is an example of a JSON manifest for image editing tools:
   "floatingToolBar": true,
   "floatingToolBarWidth": 490,
   "title": "Auto Matte",
+  "js_path": "node_modules/@fds-components-public/fds-image-editor-sam/dist/fds-image-editor-sam.js",
   "layerTypes": ["image"],
   "tools": [
     {

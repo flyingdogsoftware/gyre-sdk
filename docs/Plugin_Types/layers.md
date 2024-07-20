@@ -171,9 +171,9 @@ Implementing these functions ensures that your layer plugins will integrate smoo
 
 
 
-# Manifest Structure
+# Manifest
 
-The manifest structure for layer plugins is crucial for defining the properties and functionalities of each layer type within our AI image editing application. Below is the detailed explanation of each property in the manifest structure.
+The manifest structure for layer plugins is crucial for defining the properties and functionalities of each layer type within our AI image editing application. Below is the detailed explanation of each property in the manifest structure. The manifest is store in  `gyre_entry/gyre_ui_layers.json` in `plugins` array
 
 
 ### Example Manifest
@@ -181,14 +181,15 @@ The manifest structure for layer plugins is crucial for defining the properties 
 {
   "type": "layer",
   "title": "Text",
+  "js_path": "node_modules/@fds-components-public/fds-image-editor-text/dist/fds-image-editor-text.js",
   "controlNet": true,
   "quickMask": true,
   "moveTool": true,
   "convertToImage": true,
   "letter": "T",
   "images": {
-    "largeIcon": "/node_modules/@fds-components/fds-image-editor-text/dist/img/text_source.jpg",
-    "largeIconHover": "/node_modules/@fds-components/fds-image-editor-text/dist/img/text_result.jpg"
+    "largeIcon": "node_modules/@fds-components-public/fds-image-editor-text/dist/img/text_source.jpg",
+    "largeIconHover": "node_modules/@fds-components-public/fds-image-editor-text/dist/img/text_result.jpg"
   }
 }
 ```
@@ -197,7 +198,11 @@ The manifest structure for layer plugins is crucial for defining the properties 
 
 - **type**: Specifies the type of the layer. This should always be set to `"layer"` for layer plugins.
 
+- **tag**: The tag name of the main component. The dialog component will have `"-toolbar"` added.
+
 - **title**: The title of the layer, which will be displayed in the user interface.
+
+- **js_path**: Path to the JS file with both layer components. Paths are defined relative to the Manifest file.
 
 - **controlNet**: A boolean value indicating whether the layer supports ControlNet functionalities.
 
@@ -210,7 +215,7 @@ The manifest structure for layer plugins is crucial for defining the properties 
 - **letter**: A single letter representing the layer in the layer menu.
 
 - **images**: An object containing the paths to images required for the "Add Layer" menu.
-  - **largeIcon**: The path to the large icon image for the layer (required).
+  - **largeIcon**: The path to the large icon image for the layer (required). Paths are defined relative to the Manifest file.
   - **largeIconHover**: The path to the hover state large icon image for the layer.
 
 

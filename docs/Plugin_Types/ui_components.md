@@ -1,4 +1,4 @@
-## UI Components
+# UI Components
 ![UI Components](../components.png)
 
 
@@ -13,7 +13,7 @@ Gradient slider component used two times in a dialog.
 <img src="../component3.png"  width="400">
 
 Same component offered in form editor so non-developer can use it for any workflows.
-
+ 
 ### Example
 
 ```html
@@ -32,13 +32,14 @@ These fields are utilized in Gyre mappings.
 
 ## Manifest
 
-After you have developed and tested your UI element in a separate project, add it to Gyre with a component manifest in `gyre_ui_components.json` inside the `gyre_entry` folder of your ComfyUI extension. Follow the syntax of this example:
+After you have developed and tested your UI element in a separate project, add it to Gyre with a component manifest in `gyre_entry/gyre_ui_components.json` use `plugins` array.  Follow the syntax of this example:
 
 ```json
 {
   "components": [
     {
       "tag": "fds-gradient-slider",
+      "js_path": "gyre-extensions/node_modules/@fds-components-public/fds-image-editor-slider/dist/fds-image-editor-slider.js",
       "attributes": {
         "name": "gradient",
         "value": "0;1.0",
@@ -63,6 +64,7 @@ Each component object has the following structure:
 
 - **name** (string): The name of the component.
 - **tag** (string): The HTML tag for the component.
+- **js_path**: Path to the JS file of the ui component.
 - **icon** (string): An SVG icon representing the component.
 - **parameters** (object): An object containing the parameters for the component.
 
@@ -85,6 +87,7 @@ Here is an example of a JSON manifest for two components:
     {
       "name": "Gradient Editor",
       "tag": "fds-gradient-editor",
+      "js_path": "node_modules/@fds-components-public/fds-gradient-editor/dist/fds-gradient-editor.js",
       "icon": "<svg > ... Icon here...</svg>",
       "parameters": {
         "name": { "type": "text", "default": "gradient", "label": "Name" },

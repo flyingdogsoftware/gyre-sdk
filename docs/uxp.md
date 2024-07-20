@@ -1,4 +1,4 @@
-# Gyre Plugins Development for Adobe UXP Developers
+# For Adobe UXP Developers
 ![Transition](uxp.png)
 
 ## Comparison Table
