@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>layerManager API</title><meta name="description" content="Documentation for layerManager API"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
 <link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
 <link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
-<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1721513255";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1723412390";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <style>
@@ -95,9 +95,38 @@ td {
 <ul>
 <li><strong>id</strong>: <code>string</code> - The ID of the layer to retrieve.</li>
 </ul>
+<h3 id="getlayerssamegroup-id"><code>getLayersSameGroup(id)</code></h3>
+<p>Searches globally for a layer by its ID and returns a list of all layers in same group. If layer is not grouped it returns all top layers.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>id</strong>: <code>string</code> - The ID of one layer in the group layer list to retrieve - not the parent layer ID.</li>
+</ul>
 <h4 id="returns">Returns</h4>
 <ul>
-<li><code>Object</code> - The layer object with the specified ID.</li>
+<li><code>Array</code> - An array of all layers within the same group.</li>
+</ul>
+<h3 id="observechangessamegroup-id-callback-interval"><code>observeChangesSameGroup(id,callback,interval)</code></h3>
+<p>Searches globally for a layer by its ID and detects changes in same group or top level if layer is not grouped. Changes are changing of layer data, adding or removing layers.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>id</strong>: <code>string</code> - The ID of one layer in the group layer list to observe - not the parent layer ID.</li>
+</ul>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>callback</strong>: <code>function</code> - A callback function which will be called after every change. The function gets a list of all changes as parameter after last callback call.</li>
+</ul>
+<h4 id="interval">interval</h4>
+<ul>
+<li><strong>interval</strong>: <code>int</code> - The interval for checking changes in milliseconds (1000=1 sec). </li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>string</code> - The ID if the created observer</li>
+</ul>
+<h3 id="deleteobserver-id"><code>deleteObserver(id)</code></h3>
+<p>Deletes observer created by observeChangesSameGroup.</p>
+<ul>
+<li><strong>id</strong>: <code>string</code> - The ID of the observer to remove.</li>
 </ul>
 <h3 id="getlayerbyname-name"><code>getLayerByName(name)</code></h3>
 <p>Retrieves a layer by its name.</p>
@@ -137,10 +166,10 @@ td {
 <li><code>Object</code> - The previous image layer.</li>
 </ul>
 <h3 id="selectlayers-arrayofids"><code>selectLayers(arrayOfIDs)</code></h3>
-<p>Selects layers specified by an array of IDs. Currently, only the layer ID is supported in the list.</p>
+<p>Selects layers specified by an array of IDs. Currently, only the layer ID is supported in the list. This function is useful to just refresh the layer panel after changes to the layer structure.</p>
 <h4 id="parameters">Parameters</h4>
 <ul>
 <li><strong>arrayOfIDs</strong>: <code>Array</code> - An array of layer IDs to be selected.</li>
 </ul>
-</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#layermanager-api">layerManager API</a></li><li class="page-nav-level-2"><a href="#functions">Functions</a></li><li class="page-nav-level-3"><a href="#addlayer-layer">addLayer(layer)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#example">Example</a></li><li class="page-nav-level-3"><a href="#deletelayer-layerobject">deleteLayer(layerObject)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#getlayersbysubtype-subtype">getLayersBySubType(subType)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getlayerbyid-id">getLayerById(id)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getlayerbyname-name">getLayerByName(name)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#movelayerbelow-layerbelowid-layeraboveid">moveLayerBelow(layerBelowId, layerAboveId)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#nextimagelayer-layer">nextImageLayer(layer)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#previousimagelayer-layer">previousImageLayer(layer)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#selectlayers-arrayofids">selectLayers(arrayOfIDs)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
+</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#layermanager-api">layerManager API</a></li><li class="page-nav-level-2"><a href="#functions">Functions</a></li><li class="page-nav-level-3"><a href="#addlayer-layer">addLayer(layer)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#example">Example</a></li><li class="page-nav-level-3"><a href="#deletelayer-layerobject">deleteLayer(layerObject)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#getlayersbysubtype-subtype">getLayersBySubType(subType)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getlayerbyid-id">getLayerById(id)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#getlayerssamegroup-id">getLayersSameGroup(id)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#observechangessamegroup-id-callback-interval">observeChangesSameGroup(id,callback,interval)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#interval">interval</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#deleteobserver-id">deleteObserver(id)</a></li><li class="page-nav-level-3"><a href="#getlayerbyname-name">getLayerByName(name)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#movelayerbelow-layerbelowid-layeraboveid">moveLayerBelow(layerBelowId, layerAboveId)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#nextimagelayer-layer">nextImageLayer(layer)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#previousimagelayer-layer">previousImageLayer(layer)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#selectlayers-arrayofids">selectLayers(arrayOfIDs)</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
 <script id="app.js" async defer type="text/javascript" src="/gyre-sdk/assets/app.f93b0a1c15e882d9.js"></script></body></html>
