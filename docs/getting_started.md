@@ -32,3 +32,4 @@ The main Gyre application loads all manifest definitions for these plugins from 
 3. Add a subfolder `gyre_entry` and add manifest there.
 4. Bundle the JS executables with ComfyUI extension (usually as node modules in sub path below `gyre_entry`).
 
+<img src="extension.png" width="500">

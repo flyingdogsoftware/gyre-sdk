@@ -13,9 +13,6 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
 
 - **tools_layers**: An array of all possible tools which are available.
 
-### Layer Manager
-
-- **layerManager**: API for handling layers.
 
 ### Mask Manager
 
@@ -25,7 +22,16 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
 
 ### Open Dialog
 
-- **openDialog**: Opens a dialog from any workflow in a ComfyUI/Gyre installation. These are usually dialogs added to a workflow used in a plugin.
+- **openDialog**: Opens a dialog from any workflow in a ComfyUI/Gyre installation. These are usually dialogs added to a workflow used in a plugin. It has got the workflow name as the first parameter.
+    ```javascript
+    gyre.ComfyUI.openDialog(
+      /** @type {string} */ workflowName,
+      /** @type {object} */ formData, 
+      /** @type {string} */ title = '', 
+      /** @type {function} */newformdatacallback)
+    ```
+
+- **openDialogById**: Same as `openDialog` but it has got the workflow-id as the first parameter.
 
 ### Image API
 
@@ -53,10 +59,31 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
       /** @type {string} */ workflowName,
       /** @type {function} */ callback_finished,
       /** @type {function} */ callBack_files,
-      /** @type {object} */ formData,
+      /** @type {object} */ data,
       /** @type {function} */ callback_error
-    );
+    )
     ```
+  - **gyre.ComfyUI.executeWorkflowById**: Executes a workflow by internal ID.
+    ```javascript
+    gyre.ComfyUI.executeWorkflowById(
+      /** @type {string} */ workflowID
+      /** @type {function} */ callback_finished,
+      /** @type {function} */ callBack_files,
+      /** @type {object} */ data,
+      /** @type {function} */ callback_error
+    )
+    ```
+    If you use the `executeWorkflow` function please make sure that a unique name is used like one which is connected to plugin tag name (e.g. `fds-image-editor-sam points`). So the end-user would be able to deactivate the default workflow and make a new one with same name (but with another ID) which will be used from the plugin. 
+  - **workflowList**: An array of all available workflows.
+  - **getWorkflowById**: You can use this function to read a workflow by ID instead of searching in the list by own code.
+  - **convertFormData**: Converts complex data from `openDialog` or `openDialogById` function to simple key-value structure which is used by `executeWorkflow` and `executeWorkflowById`.
+    ```javascript
+    data=gyre.ComfyUI.convertFormData(
+      /** @type {object} */ formData
+    )
+    ```
+
+
 
 ## Canvas Parameters and Helper Functions
 

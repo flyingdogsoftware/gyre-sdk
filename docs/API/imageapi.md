@@ -1,6 +1,6 @@
 # ImageAPI Documentation
 
-The `ImageAPI` provides a set of asynchronous functions to manipulate images using HTML canvas. The API supports various operations such as color adjustments, scaling, and combining image layers. Below is the detailed documentation of each function available in the `ImageAPI`.
+The `ImageAPI` provides a set of functions to manipulate images using HTML canvas. The API supports various operations such as color adjustments, scaling, and combining image layers. Below is the detailed documentation of each function available in the `ImageAPI`.
 
 ## Functions
 
@@ -108,26 +108,24 @@ Performs auto dilation on a mask with a fixed size and returns a new canvas.
 #### Returns
 - `Promise` - A promise that resolves with the new canvas element.
 
+### `applyAlphaChannel`
+Copies the alpha channel from one image to another.
+
+#### Parameters
+- **base64**: `string` - The base64 encoded image string (or an image url) of the target image.
+- **sourceImageBase64**: `string` - The base64 encoded image string (or an image url) of the source image.
+#### Returns
+- `Promise` - A promise that resolves with the new image in base64 format.
+
+
 ## Example Usage
 
 ```javascript
 // Example of how to use the setColorPreserveAlpha function
-gyre.imageAPI.setColorPreserveAlpha('image_url', 255, 0, 0)
-    .then(() => {
-        console.log('Color set successfully');
-    })
-    .catch(err => {
-        console.error('Error setting color:', err);
-    });
+await gyre.imageAPI.setColorPreserveAlpha('image_url', 255, 0, 0)
 
 // Example of how to use the getImageSize function
-gyre.imageAPI.getImageSize('image_url')
-    .then(size => {
-        console.log('Image size:', size);
-    })
-    .catch(err => {
-        console.error('Error getting image size:', err);
-    });
+let size=await gyre.imageAPI.getImageSize('image_url')
+console.log(size)
 ```
 
-This documentation provides a comprehensive overview of the `ImageAPI` functions, their parameters, and expected returns, enabling developers to effectively utilize the API for image manipulation tasks.

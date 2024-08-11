@@ -48,8 +48,35 @@ Searches globally for a layer by its ID.
 #### Parameters
 - **id**: `string` - The ID of the layer to retrieve.
 
+### `getLayersSameGroup(id)`
+Searches globally for a layer by its ID and returns a list of all layers in same group. If layer is not grouped it returns all top layers.
+
+#### Parameters
+- **id**: `string` - The ID of one layer in the group layer list to retrieve - not the parent layer ID.
+
 #### Returns
-- `Object` - The layer object with the specified ID.
+- `Array` - An array of all layers within the same group.
+
+### `observeChangesSameGroup(id,callback,interval)`
+Searches globally for a layer by its ID and detects changes in same group or top level if layer is not grouped. Changes are changing of layer data, adding or removing layers.
+
+#### Parameters
+- **id**: `string` - The ID of one layer in the group layer list to observe - not the parent layer ID.
+
+#### Parameters
+- **callback**: `function` - A callback function which will be called after every change. The function gets a list of all changes as parameter after last callback call.
+
+#### interval
+- **interval**: `int` - The interval for checking changes in milliseconds (1000=1 sec). 
+
+#### Returns
+- `string` - The ID if the created observer
+
+### `deleteObserver(id)`
+Deletes observer created by observeChangesSameGroup.
+
+- **id**: `string` - The ID of the observer to remove.
+
 
 ### `getLayerByName(name)`
 Retrieves a layer by its name.
@@ -86,7 +113,8 @@ Finds the previous image layer, skipping all other layers in between.
 - `Object` - The previous image layer.
 
 ### `selectLayers(arrayOfIDs)`
-Selects layers specified by an array of IDs. Currently, only the layer ID is supported in the list.
+Selects layers specified by an array of IDs. Currently, only the layer ID is supported in the list. This function is useful to just refresh the layer panel after changes to the layer structure.
 
 #### Parameters
 - **arrayOfIDs**: `Array` - An array of layer IDs to be selected.
+

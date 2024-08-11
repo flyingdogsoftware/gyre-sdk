@@ -172,7 +172,35 @@ Below is a complete example of using the `<fds-local-files>` component in headle
 
 This setup allows for a clean and user-friendly interface where file loading is initiated through a button, while the actual file input element remains hidden.
 
+## `<fds-image-editor-menu>`
 
+With this component a multi level pop-up menu can be bind to any UI element (like a button). It supports direct JSON data, so there is no need for a complex template here. 
+
+#### Parameters
+- **menu**: `menu` - The structure of the menu with `name` of an entry and optional `items` for a sub menu. Each element needs a unique key.
+- **element**: `HTML Element` - The element in DOM tree from which the menu gets its position.
+- **callback**: `function` - the callback function which will be called after a menu entry is clicked. Parameters: `key` the menu entry key, `value` (not in use) and `item` which is the full object.
+
+#### Example
+```JS
+<script>
+  function openMenu() {
+    let contextMenu = window.document.createElement("fds-image-editor-menu")
+    let menu={"open":{name:"Open..."},"Save...":{name:"Save..."}}
+    contextMenu.menu = menu
+    contextMenu.element = menuButton
+    contextMenu.callback = (key, p, item) => {
+        console.log("clicked:",key,item)
+    }
+  }
+  let menuButton
+</script>
+   <fds-image-editor-button
+        type="button"
+        on:click={openMenu}
+        bind:this={menuButton}>File...</fds-image-editor-button>
+
+```
 
 
 ## `<fds-image-editor-slider>`
