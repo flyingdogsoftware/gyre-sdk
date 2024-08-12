@@ -55,8 +55,7 @@ The `layer` parameter points to an internal data object storing all information 
 For testing a tool, just use our test environment from our SDK:
 
 ```html
-<script src="https://flyingdogsoftware.github.io/gyre-ui-dist/dist/node_modules/%40fds-components/fds-ai-image-editor/dist/fds-ai-image-editor.js?1"></script>
-<script src="https://flyingdogsoftware.github.io/gyre-ui-dist/dist/fds-image-editor-canvas.js"></script>
+<script src="https://flyingdogsoftware.github.io/gyre-ui-dist/dist/sdk.js"></script>
 ```
 
 The first script activates the connection to a ComfyUI server with workflow management, workflow pre-parser, and execution of any ComfyUI workflows by name.
