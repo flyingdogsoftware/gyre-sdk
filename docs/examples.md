@@ -3,7 +3,7 @@
 
 Welcome to the **Gyre SDK Examples** page! Here you will find a collection of plugins and extensions developed using the Gyre SDK. These examples demonstrate the capabilities and integration of various components within the Gyre ecosystem.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z8iHtuxfuFE?si=22NpKUh5Imd6HAWz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ExGkKfTEuKM?si=ytHwBWz5zYiedPZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Using SAM Tool and Adjustment Layer Plugins together.
 
