@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Gyre API</title><meta name="description" content="Documentation for Gyre API"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
 <link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
 <link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
-<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1723562941";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1724878819";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <style>
@@ -54,7 +54,18 @@ td {
 <h2 id="parameters-and-apis">Parameters and APIs</h2>
 <h3 id="layers">Layers</h3>
 <ul>
-<li><strong>layers</strong>: An array of all layers in the current open document.</li>
+<li>
+<p><strong>layers</strong>: An array of all layers in the current open document.</p>
+</li>
+<li>
+<p><strong>createLayerInstance</strong>: Create layer instance defined by layer type. Such an instance can be used to add a layer via layerManager API (see below). An optional data object can be provided to fill layer properties.</p>
+<pre class="code">
+<code class="language-javascript">gyre.createLayerInstance(
+/** @type {string} */ name,
+/** @type {string} */ type,
+<span class="comment block documentation js"><span class="punctuation definition comment js">/**</span> @type {object} <span class="punctuation definition comment js">*/</span></span> <span class="variable other readwrite js">layerFrom</span><span class="invalid illegal stray-bracket-end js">)</span>
+</code></pre>
+</li>
 </ul>
 <h3 id="tools-layers">Tools Layers</h3>
 <ul>

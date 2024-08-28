@@ -1,4 +1,4 @@
-# Welcome to the Gyre Plugin SDK (v1.0.2)
+# Welcome to the Gyre Plugin SDK (v1.0.3)
 
 ![Gyre SDK](head.png)
 

@@ -88,15 +88,18 @@ async function prepareForAI(resultLayer) {
 }
 ```
 
-### 2. addLayer(newLayer)
-- **Description**: Adds a new layer to the document.
-- **Parameters**: 
-  - `newLayer`: An empty layer with the size of the current document.
-- **Functionality**: Fill `newLayer` with initial required default data.
+### 2. layerInstance()
+- **Description**: Prepares the layer before adding to the document.
+- **Functionality**: A custom layer class is required wich extends the base layer class. This custom layer class is connected to the layer type which is the plugin tag name.
 
 ```javascript
-function addLayer(newLayer) {
-  // Implementation here
+function layerInstance() {
+   class myLayer extends globalThis.gyre.getLayerBaseClass() {
+    // layer parameters and logic here
+   }
+  let newlayer=new myLayer()
+  // set default data
+  return newlayer
 }
 ```
 

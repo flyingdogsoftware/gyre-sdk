@@ -9,6 +9,14 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
 
 - **layers**: An array of all layers in the current open document.
 
+- **createLayerInstance**: Create layer instance defined by layer type. Such an instance can be used to add a layer via layerManager API (see below). An optional data object can be provided to fill layer properties.
+    ```javascript
+  gyre.createLayerInstance(
+  /** @type {string} */ name,
+  /** @type {string} */ type,
+  /** @type {object} */ layerFrom)
+    ```
+
 ### Tools Layers
 
 - **tools_layers**: An array of all possible tools which are available.
