@@ -33,6 +33,16 @@ Deletes a specified layer from the layer list.
 #### Parameters
 - **layerObject**: `Object` - The layer object to be deleted.
 
+
+### `addLayerMask(url=null,extractFromDocumentSize=false)`
+Easiest method to add a layer mask to current selected layer. For advanced mask managemet please check out [Smart Layers](/API/smart_layers).
+
+#### Parameters
+- **url**: `base64` - An image in base64 URL format which has to be in black/white and in same size as current selected layer image. If empty just an empty mask will be added.
+
+- **extractFromDocumentSize**: `boolean` - If true the mask image data will be provided in document size instead of current selected layer image size. From that full image the part which fits to current selected layer image data (x,y,with,height and rotation) will be extracted.
+
+
 ### `getLayersBySubType(subType)`
 Retrieves all layers of a specified sub-type.
 
@@ -47,6 +57,20 @@ Searches globally for a layer by its ID.
 
 #### Parameters
 - **id**: `string` - The ID of the layer to retrieve.
+
+#### Returns
+- `Object` - The layer instance.
+
+### `findById(parent,id)`
+Searches globally for a layer by its ID and returns result object with information about layer and parent.
+
+#### Parameters
+- **parent**: `layer` - The parent layer object, use  `null` if you want to search from root.
+- **id**: `string` - The ID of the layer to retrieve.
+
+#### Returns
+- `Object` - An object with `entry` which is layer instance and `parent` which is parent layer.
+
 
 ### `getLayersSameGroup(id)`
 Searches globally for a layer by its ID and returns a list of all layers in same group. If layer is not grouped it returns all top layers.
@@ -117,4 +141,10 @@ Selects layers specified by an array of IDs. Currently, only the layer ID is sup
 
 #### Parameters
 - **arrayOfIDs**: `Array` - An array of layer IDs to be selected.
+
+### `maxId()`
+Get highest layer ID. So if you want to add a new layer just add 1 for it's ID.
+
+#### Returns
+- `integer` - The highest layer ID.
 

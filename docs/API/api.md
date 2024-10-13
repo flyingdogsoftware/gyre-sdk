@@ -47,16 +47,45 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
 
 ### layerManager API
 
-- **layerManager**: Functions handling layers of canvas like adding or deleting layers. See [layerManager](/API/layermanager) documentation.
+- **layerManager**: Functions handling layers like adding or deleting layers. See [layerManager](/API/layermanager) documentation.
 
 ### Palette Values
 
 - **paletteValues**: Current environment parameters. Most important parameter:
   - **paletteValues.currentLayer**: Accesses the active layer image data.
+  - **internalCopyInfo**: information about image data which has put into clipboard from own application (`x`,`y`).
 
 ### Drag & Drop API
 
 - **dragDrop**: An API for handling drag & drop operations, such as a rectangle for a simple selection.
+
+## Callback Functions
+
+- **copy** (`callbackFunctions['copy']`):  
+  Provide your own callback function to be executed when the user selects the menu entry or shortcut for the copy-to-clipboard operation. This allows an activated tool to put something from its own context into the clipboard. Make sure to delete this callback if the tool is destroyed.
+
+- **paste** (`callbackFunctions['paste']`):  
+  Provide your own callback function to be executed when the user selects the menu entry or shortcut for the paste-from-clipboard operation. This allows an activated tool to copy something from the clipboard into its own context. Make sure to delete this callback if the tool is destroyed.
+
+- **onKeyDown**  (`callbackFunctions['onKeyDown']`): Please use this callback if your plugin wants to support own shortcuts. It has got the HTML event object as only parameter. Typing in INPUT, TEXTARE or SELECT elements somewhere in the UI will be ignored so we highly recommend to use this callback instead your own keyboard handler. Make sure to delete this callback if the tool is destroyed.
+
+## Undo/Redo Functionality
+
+The system provides an `undo_redo_add` function that allows you to register actions for undo and redo, with custom callbacks to handle state restoration.
+
+### Example: Undo/Redo for Shape Selection
+
+```javascript
+undo_redo_add('selection', 'shape', {beforeShapesJSON: largePaper.beforeShapesJSON, afterShapesJSON: largePaper.afterShapesJSON }, (state, action) => {
+    let restoreShapes;
+    if (action === 'undo') restoreShapes = state.data.beforeShapesJSON;
+    if (action === 'redo') restoreShapes = state.data.afterShapesJSON;
+    largePaper.restoreJSON(restoreShapes);
+});
+```
+
+
+
 
 ### ComfyUI API
 
@@ -100,6 +129,7 @@ The `gyre` API is accessible via `globalThis.gyre` and provides various paramete
 - **canvas.width**: The width of the open document/canvas.
 - **canvas.height**: The height of the open document/canvas.
 - **canvas.zoom**: The zoom level of the canvas.
+- **canvas.screen**: Information about current visible part of the canvas: `width`, `height`, `scrollX` and `scrollY`.
 
 ### Canvas Helper Functions
 

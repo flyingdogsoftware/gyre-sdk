@@ -131,7 +131,7 @@ This section provides detailed information about the JSON manifest structure for
 - **layerTypes** (array): An array of layer types the tool is applicable to. Example: `["image"]`.
 - **tools** (array): An array of tool objects defining each sub-tool.
 - **icons** (object): An object containing icon definitions.
-
+- **refreshOnScroll** (boolean): set it to `true` if you want the `refresh()` called as user scrolls the canvas. This is useful if the tool is working on visible part of canvas only (see `canvas.screen` object in Gyre API).
 ### Tool Object 
 
 Each tool object has the following structure:

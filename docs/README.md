@@ -1,4 +1,4 @@
-# Welcome to the Gyre Plugin SDK (v1.0.3)
+# Welcome to the Gyre Plugin SDK (v2.0)
 
 ![Gyre SDK](head.png)
 
@@ -12,6 +12,16 @@ Our large API and hybrid plugins provide the tools you need to automate and cust
 Harness the power of advanced AI features to take your image editing to the next level. Gyre empowers you to integrate with connected services, automate processes, and add new capabilities effortlessly.
 
 Join our vibrant community on Discord, engage in developer sessions, and benefit from our comprehensive test environment. Explore the possibilities with Gyre and elevate your image editing capabilities. Experience the power and versatility of Gyre today, and take your creative workflow to new heights.
+
+## New in 2.0
+
+Gyre has taken a major leap forward with the introduction of powerful new features in its SDK, including:
+
+* [Smart Layers](/API/smart_layers): Layers are now dynamic, smart instances with their own API. Each layer is rendered through non-destructive transformations and manages its own rendering pipeline in the background, automatically responding to changes.
+* Enhanced Image and Mask Management: The image and mask management API has been significantly improved, making it easier to develop custom filters and manage individual layers with greater flexibility.
+* Mask Handling: Gyre offers robust layer mask management, including support for Layer Masks, Clipping Masks, Extracted Objects, and non-destructive filters applied directly to masks - see Mask section [here](/API/smart_layers).
+* Upgraded Plugin Support: All example plugins have been updated to leverage the new API capabilities, providing developers with more functionality out of the box.
+* Callback Functions: Support for callback functions has been added, covering essential features like Undo/Redo, Clipboard management, and Shortcut handling.
 
 ---
 

@@ -1,6 +1,6 @@
 # ImageAPI Documentation
 
-The `ImageAPI` provides a set of functions to manipulate images using HTML canvas. The API supports various operations such as color adjustments, scaling, and combining image layers. Below is the detailed documentation of each function available in the `ImageAPI`.
+The `ImageAPI` provides a set of functions to manipulate images using HTML canvas. The API supports various operations such as color adjustments, scaling, combining image layers, and processing individual pixels based on custom logic.
 
 ## Functions
 
@@ -16,6 +16,8 @@ Sets the color of an image while preserving its alpha channel.
 #### Returns
 - `Promise` - A promise that resolves when the color change is applied.
 
+---
+
 ### `base64ToCanvas`
 Converts a base64 encoded image to an HTML canvas element.
 
@@ -26,6 +28,8 @@ Converts a base64 encoded image to an HTML canvas element.
 
 #### Returns
 - `Promise` - A promise that resolves with the canvas element.
+
+---
 
 ### `getImageDataCombined`
 Retrieves image data from multiple layers within a bounding box and optionally merges the alpha channel from a mask.
@@ -44,6 +48,8 @@ Retrieves image data from multiple layers within a bounding box and optionally m
 #### Returns
 - `Promise` - A promise that resolves with the base64 encoded image data.
 
+---
+
 ### `scaleImageCanvas`
 Scales an image using an HTML canvas element.
 
@@ -55,6 +61,8 @@ Scales an image using an HTML canvas element.
 #### Returns
 - `Promise` - A promise that resolves with the base64 encoded scaled image.
 
+---
+
 ### `getImageSize`
 Retrieves the dimensions of an image.
 
@@ -63,6 +71,8 @@ Retrieves the dimensions of an image.
 
 #### Returns
 - `Promise` - A promise that resolves with an object containing the width and height of the image.
+
+---
 
 ### `adjustDimensions`
 Calculates image dimensions to fit within a maximum size and be divisible by a specified divider.
@@ -77,6 +87,8 @@ Calculates image dimensions to fit within a maximum size and be divisible by a s
 #### Returns
 - `Promise` - A promise that resolves with an object containing the adjusted width and height.
 
+---
+
 ### `fillImageBackground`
 Fills the transparent parts of an image with a specified color.
 
@@ -87,17 +99,23 @@ Fills the transparent parts of an image with a specified color.
 #### Returns
 - `Promise` - A promise that resolves with the base64 encoded image with the filled background.
 
+---
+
 ### `canvasMakeTransparentWhite`
 Makes the transparent parts in the alpha channel of a canvas white.
 
 #### Parameters
 - **canvas**: `Canvas` - The canvas element to modify.
 
+---
+
 ### `canvasInvert`
 Inverts the colors of an image on a canvas.
 
 #### Parameters
 - **canvas**: `Canvas` - The canvas element to modify.
+
+---
 
 ### `canvasExpandMaskFast`
 Performs auto dilation on a mask with a fixed size and returns a new canvas.
@@ -108,15 +126,65 @@ Performs auto dilation on a mask with a fixed size and returns a new canvas.
 #### Returns
 - `Promise` - A promise that resolves with the new canvas element.
 
+---
+
 ### `applyAlphaChannel`
 Copies the alpha channel from one image to another.
 
 #### Parameters
-- **base64**: `string` - The base64 encoded image string (or an image url) of the target image.
-- **sourceImageBase64**: `string` - The base64 encoded image string (or an image url) of the source image.
+- **base64**: `string` - The base64 encoded image string (or an image URL) of the target image.
+- **sourceImageBase64**: `string` - The base64 encoded image string (or an image URL) of the source image.
+
 #### Returns
 - `Promise` - A promise that resolves with the new image in base64 format.
 
+---
+
+### `processImage`
+Processes the pixels of an image based on a condition and modification function.
+
+#### Parameters
+- **imageUrl**: `string` - The URL of the image to be processed.
+- **modifyPixel**: `function` - A function that takes the pixel data and index, allowing for custom pixel manipulation.
+- **imageUrl2**: `string` (optional) - The URL of a second image, if needed for comparison or additional data processing.
+
+#### Returns
+- `Promise` - A promise that resolves with the modified image as a base64 encoded string.
+
+---
+
+### `convertTransparentToWhite`
+Converts all transparent pixels in an image to white.
+
+#### Parameters
+- **imageUrl**: `string` - The URL of the image.
+
+#### Returns
+- `Promise` - A promise that resolves with the image in base64 format with transparent pixels converted to white.
+
+---
+
+### `convertWhiteToTransparent`
+Converts all white pixels in an image to transparent.
+
+#### Parameters
+- **imageUrl**: `string` - The URL of the image.
+
+#### Returns
+- `Promise` - A promise that resolves with the image in base64 format with white pixels converted to transparent.
+
+---
+
+### `loadImage`
+Loads an image from a URL into an `Image` object.
+
+#### Parameters
+- **url**: `string` - The URL of the image to load.
+
+#### Returns
+- `Promise` - A promise that resolves with the loaded `Image` object.
+
+---
 
 ## Example Usage
 
@@ -125,7 +193,16 @@ Copies the alpha channel from one image to another.
 await gyre.imageAPI.setColorPreserveAlpha('image_url', 255, 0, 0)
 
 // Example of how to use the getImageSize function
-let size=await gyre.imageAPI.getImageSize('image_url')
+let size = await gyre.imageAPI.getImageSize('image_url')
 console.log(size)
-```
 
+// Example of how to use processImage with a custom pixel modification
+await gyre.imageAPI.processImage('image_url', (data, i) => {
+  if (data[i + 3] === 0) {
+    data[i] = 255 // Red
+    data[i + 1] = 255 // Green
+    data[i + 2] = 255 // Blue
+    data[i + 3] = 255 // Fully opaque
+  }
+})
+```

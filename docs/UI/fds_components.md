@@ -179,17 +179,17 @@ With this component a multi level pop-up menu can be bind to any UI element (lik
 #### Parameters
 - **menu**: `menu` - The structure of the menu with `name` of an entry and optional `items` for a sub menu. Each element needs a unique key.
 - **element**: `HTML Element` - The element in DOM tree from which the menu gets its position.
-- **callback**: `function` - the callback function which will be called after a menu entry is clicked. Parameters: `key` the menu entry key, `value` (not in use) and `item` which is the full object.
+- **callback**: `function` - the callback function which will be called after a menu entry is clicked. Parameters: `item` which is the full menu entry object and  `key` which is the menu entry key.
 
 #### Example
 ```JS
 <script>
   function openMenu() {
     let contextMenu = window.document.createElement("fds-image-editor-menu")
-    let menu={"open":{name:"Open..."},"Save...":{name:"Save..."}}
+    let menu={"open":{name:"Open..."},"save":{name:"Save..."}}
     contextMenu.menu = menu
     contextMenu.element = menuButton
-    contextMenu.callback = (key, p, item) => {
+    contextMenu.callback = (item,key) => {
         console.log("clicked:",key,item)
     }
   }
