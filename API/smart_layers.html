@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Smart Layers</title><meta name="description" content="Documentation for Smart Layers"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1728862821";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    body {
+--font-family:  "Figtree", sans-serif;
+--font-size: 19px;
+}
+nav a,
+nav span {
+  font-size: var(--font-size);
+}
+.docgen-content a {
+    font-size: var(--font-size);
+    text-decoration: none;
+
+}
+#search-results a {
+  font-size: var(--font-size);
+}
+
+p {
+  font-size: var(--font-size);
+}
+li {
+  font-size: var(--font-size);
+}
+
+p code,
+li code {
+
+  font-size: var(--font-size);
+}
+
+td {
+    font-size: var(--font-size);
+
+}
+.docgen-content {
+    max-width: 1280px;
+}
+
+.search {
+    max-width: 1280px;
+}
+
+
+</style></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><a href="/gyre-sdk/"><img src="/gyre-sdk/logo.png" alt="Gyre SDK logo"></a><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li><li><a href="/gyre-sdk/Plugin_Types/brushes">Brush Plugins</a></li></ul></details></li><li class="nested"><details><summary><span>Gyre API</span></summary><ul><li><a href="/gyre-sdk/API/api">Gyre API</a></li><li><a href="/gyre-sdk/API/imageapi">ImageAPI Documentation</a></li><li><a href="/gyre-sdk/API/layermanager">layerManager API</a></li><li><a href="/gyre-sdk/API/smart_layers">Smart Layers</a></li></ul></details></li><li class="nested"><details><summary><span>UI</span></summary><ul><li><a href="/gyre-sdk/UI/fds_components">FDS Image Editor Components</a></li><li><a href="/gyre-sdk/UI/icon_management">Icon Management</a></li></ul></details></li><li><a href="/gyre-sdk/examples">Gyre SDK Examples</a></li><li><a href="/gyre-sdk/uxp">For Adobe UXP Developers</a></li><li><a href="/gyre-sdk/share">Share Your Plugin</a></li><li><a href="/gyre-sdk/community">Developer Community</a></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="smart-layers">Smart Layers</h1>
+<h2 id="overview">Overview</h2>
+<p>Gyre’s Smart Layers API provides advanced, non-destructive layer handling similar to “Smart Objects” in other image editing software. Each layer in Gyre is a <strong>Smart Layer</strong>, allowing for embedding, linking, transformations, and seamless updates. This SDK guide explains the core functionality, methods, and best practices for leveraging Gyre’s Smart Layers API in your applications.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#classes-overview">Classes Overview</a>
+<ul>
+<li><a href="#layer-creation">Layer Creation</a></li>
+<li><a href="#extending-the-layer-class">Extending the Layer Class</a></li>
+</ul>
+</li>
+<li><a href="#layer-properties">Layer Properties</a></li>
+<li><a href="#layer-methods">Layer Methods</a>
+<ul>
+<li><a href="#common-methods">Common Methods</a></li>
+<li><a href="#image-operations-methods">Image Operations Methods</a></li>
+</ul>
+</li>
+<li><a href="#layer-usage">Layer Usage</a>
+<ul>
+<li><a href="#creating-and-manipulating-layers">Creating and Manipulating Layers</a></li>
+<li><a href="#non-destructive-editing">Non-Destructive Editing</a></li>
+<li><a href="#rendering-layers">Rendering Layers</a></li>
+</ul>
+</li>
+<li><a href="#best-practices">Best Practices</a></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>To use Gyre Smart Layers, use the <code>createLayerInstance</code> method from Gyre’s global API to create instances of layers directly.</p>
+<pre class="code">
+<code class="language-javascript"><span class="variable other object js">globalThis</span><span class="punctuation accessor js">.</span><span class="meta property object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">createLayerInstance</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="variable other readwrite js">name</span><span class="punctuation separator comma js">,</span> <span class="variable other readwrite js">type</span><span class="punctuation separator comma js">,</span> <span class="variable other readwrite js">layerFrom</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+</code></pre>
+<h3 id="parameters">Parameters:</h3>
+<ul>
+<li><strong><code>name</code></strong> (<code>string</code>): The name of the new layer.</li>
+<li><strong><code>type</code></strong> (<code>string</code>): The type of the layer (e.g., image, mask).</li>
+<li><strong><code>layerFrom</code></strong> (<code>object</code>, optional): A predefined object containing layer data. This allows initializing the new layer with existing properties.</li>
+</ul>
+<p>The result will be an instance of <code>layerBase</code>, which provides access to the full set of methods for layer manipulation.</p>
+<h2 id="classes-overview">Classes Overview</h2>
+<h3 id="layer-creation">Layer Creation</h3>
+<p>Instead of importing <code>layerBase</code> directly, you create layers using the <code>globalThis.gyre.createLayerInstance()</code> method. This method abstracts the creation of new layers and ensures that all references and dependencies are properly initialized.</p>
+<pre class="code">
+<code class="language-javascript"><span class="storage type js">let</span> <span class="variable other readwrite js">layer</span> <span class="keyword operator assignment js">=</span> <span class="variable other object js">globalThis</span><span class="punctuation accessor js">.</span><span class="meta property object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">createLayerInstance</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>New Layer<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image<span class="punctuation definition string end js">&#39;</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+</code></pre>
+<h3 id="extending-the-layer-class">Extending the Layer Class</h3>
+<p>For creating custom layer types or special plugins, you should create a new class that extends from the base layer class provided by Gyre. This ensures your custom layers inherit all the non-destructive features while allowing you to extend the functionality as needed.</p>
+<p>To extend the base class, use:</p>
+<pre class="code">
+<code class="language-javascript"><span class="meta class js"><span class="storage type class js">class</span> <span class="entity name class js">MyCustomLayer</span> <span class="storage modifier extends js">extends</span> <span class="entity other inherited-class js">globalThis</span><span class="punctuation accessor js">.</span><span class="entity other inherited-class js">gyre</span><span class="punctuation accessor js">.</span><span class="entity other inherited-class js">getLayerBaseClass</span>() <span class="meta class js"><span class="meta block js"><span class="punctuation section block js">{</span></span></span></span><span class="meta class js"><span class="meta block js">
+    <span class="meta function declaration js"><span class="entity name function js">constructor</span><span class="punctuation section group begin js">(</span><span class="variable parameter function js">name</span><span class="punctuation separator parameter function js">,</span> <span class="variable parameter function js">type</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+        <span class="meta function-call js"><span class="support function js">super</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="variable other readwrite js">name</span><span class="punctuation separator comma js">,</span> <span class="variable other readwrite js">type</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+        <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Custom initialization logic here
+</span>    <span class="punctuation section block js">}</span></span>
+
+    <span class="meta function declaration js"><span class="entity name function js">customMethod</span><span class="punctuation section group begin js">(</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span></span><span class="meta block js"><span class="punctuation section block js">{</span>
+        <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Define your custom behavior for the layer
+</span>    <span class="punctuation section block js">}</span></span>
+<span class="punctuation section block js">}</span></span></span>
+</code></pre>
+<p>Using this approach, you can develop custom layers that integrate seamlessly with Gyre’s core functionality.</p>
+<h2 id="layer-properties">Layer Properties</h2>
+<p>Here are some essential properties that are part of the <code>layerBase</code>:</p>
+<ul>
+<li>
+<p><strong>Dimensions</strong>:</p>
+<ul>
+<li><code>width</code>, <code>height</code> - External get/set dimensions that may include referenced values.</li>
+</ul>
+</li>
+<li>
+<p><strong>Position and Transformation</strong>:</p>
+<ul>
+<li><code>x</code>, <code>y</code> - Set or get the layer’s position within the document.</li>
+<li><code>rotation</code> - Set or get the layer’s rotation angle.</li>
+</ul>
+</li>
+<li>
+<p><strong>Layer Metadata</strong>:</p>
+<ul>
+<li><code>name</code> - Custom name for the layer.</li>
+<li><code>type</code>, <code>subType</code> - Specifies the type (e.g., mask, image).</li>
+<li><code>opacity</code> - Adjusts the opacity of the layer (default is <code>100</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>References</strong>:</p>
+<ul>
+<li><code>ref</code> - Points to another layer for linking attributes.</li>
+<li><code>refType</code> - Indicates the reference type (e.g., <code>moveTool</code>). Empty refType uses all properties - also the image data. With <code>moveTool</code> type only transformations  are used but not the image data. So for example mask layers have <code>refType</code> set to <code>moveTool</code> because the image data itself are just the mask image data.</li>
+</ul>
+</li>
+</ul>
+<h2 id="layer-methods">Layer Methods</h2>
+<h3 id="common-methods">Common Methods</h3>
+<h4 id="getreflayer"><code>getRefLayer()</code></h4>
+<p>Returns the root layer for the current layer’s reference chain.</p>
+<h4 id="getvaluebyref-name"><code>getValueByRef(name)</code></h4>
+<p>Fetches a value from the linked reference layer, allowing properties to be dynamically inherited.</p>
+<h4 id="setvaluebyref-name-value"><code>setValueByRef(name, value)</code></h4>
+<p>Sets a value on the linked reference layer, ensuring consistent updates.</p>
+<h4 id="tojson"><code>toJSON()</code></h4>
+<p>Serializes the layer into a JSON object, excluding internal properties and non-serializable types.</p>
+<h4 id="unlink"><code>unlink()</code></h4>
+<p>Unlinks the current layer from its reference (<code>ref</code>), making it an independent layer.</p>
+<h4 id="preparedelete"><code>prepareDelete()</code></h4>
+<p>Prepares a layer for deletion by properly unlinking all dependent references or clipping masks.</p>
+<h3 id="image-operations-methods">Image Operations Methods</h3>
+<h4 id="previewcache"><code>previewCache()</code></h4>
+<p>Generates and caches a preview of the layer. This is automatically triggered when properties change.</p>
+<h4 id="generatealphamask"><code>generateAlphaMask()</code></h4>
+<p>Generates an alpha mask and stores it for non-destructive use in masking. This function will be called automatically.</p>
+<h4 id="render"><code>render()</code></h4>
+<p>Renders the current layer along with all masks, returning the rendered image’s URL. </p>
+<h4 id="renderindocumentsize-maxwidth-null"><code>renderInDocumentSize(maxWidth = null)</code></h4>
+<p>Renders the layer to fit the current document size, optionally scaling down via <code>maxWidth</code>.</p>
+<h4 id="extractimagefromdocument-url"><code>extractImageFromDocument(url)</code></h4>
+<p>Extracts a segment of the document based on the current layer’s size, position, and rotation.</p>
+<h3 id="clippingmask"><code>clippingMask()</code></h3>
+<p>The <code>clippingMask()</code> function creates a clipping mask from a referenced layer and stores the image data in <code>this.url</code> from another layer (referred to as the clipping mask). This allows the clipping mask to behave like a standard layer mask, working specifically with the referenced image layer. This function will be called automatically.</p>
+<h2 id="masks">Masks</h2>
+<p>Gyre has go very powerful mask management and supports multiple masks, clipping masks , additional objects selected by masks and any kind of non-destructive filters provided by ComfyUI workflows. A mask layer automatically has got same transformation (positipon, rotation and size) of it’s image layer.</p>
+<p>Key elements:</p>
+<ul>
+<li><strong>ref</strong>: The ID of the layer to which the mask is applied to.</li>
+<li><strong>Parent Layer</strong>: The parent layer must be an image layer, as the clipping mask is applied to an image. SO the mask layer is entry of <code>children</code> array of such an image layer. Any image layer can have multiple masks/children.</li>
+<li><strong>refType</strong>: The reference type property which has to be set to <code>&quot;moveTool&quot;</code> always.</li>
+<li><strong>type</strong>: The layer type which is set to <code>mask</code> always.</li>
+<li><strong>refClippingMask</strong>: The Clipping Mask references the image layer by ID where the mask data is coming from. Use this parameter only if you want to set a clipping mask.</li>
+</ul>
+<h3 id="masked-objects">Masked Objects</h3>
+<p>Parts of an image can be extracted as objects. In this case additional linked layers are used on top of the original image layer. Each of such a linked layer has got it’s own mask. In this case an additional layer with type <code>image</code> has to be generated but without an <code>url</code> parameter. With the <code>ref</code> parameter the image data is used from any the original image. The <code>refType</code> is not set in this case. As child in <code>children</code> array that new layer has got it’s own mask. Transformation on orgiginal image like rotation, postion or resize and changing the image data will be automatically applied to the object layer.</p>
+<h3 id="filter-on-mask">Filter on Mask</h3>
+<p>Use an Adjustment Layer to apply any filter (e.g. blur) to an mask.</p>
+<h2 id="layer-usage">Layer Usage</h2>
+<h3 id="creating-and-manipulating-layers">Creating and Manipulating Layers</h3>
+<p>To create a new layer:</p>
+<pre class="code">
+<code class="language-javascript"><span class="storage type js">let</span> <span class="variable other readwrite js">layer</span> <span class="keyword operator assignment js">=</span> <span class="variable other object js">globalThis</span><span class="punctuation accessor js">.</span><span class="meta property object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">createLayerInstance</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>Background Layer<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image<span class="punctuation definition string end js">&#39;</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+<span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta property object js">width</span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">500</span><span class="punctuation terminator statement js">;</span>
+<span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta property object js">height</span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">300</span><span class="punctuation terminator statement js">;</span>
+<span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta property object js">x</span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">100</span><span class="punctuation terminator statement js">;</span>
+<span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta property object js">y</span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">150</span><span class="punctuation terminator statement js">;</span>
+<span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta property object js">rotation</span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">0.1</span><span class="punctuation terminator statement js">;</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Rotate by 0.1 radians
+</span></code></pre>
+<p>You can also initialize a layer with existing data using <code>layerFrom</code>:</p>
+<pre class="code">
+<code class="language-javascript"><span class="storage type js">let</span> <span class="variable other readwrite js">predefinedData</span> <span class="keyword operator assignment js">=</span> <span class="meta object-literal js"><span class="punctuation section block js">{</span> <span class="meta object-literal key js">width</span><span class="punctuation separator key-value js">:</span> <span class="constant numeric js">400</span><span class="punctuation separator comma js">,</span> <span class="meta object-literal key js">height</span><span class="punctuation separator key-value js">:</span> <span class="constant numeric js">200</span><span class="punctuation separator comma js">,</span> <span class="meta object-literal key js">x</span><span class="punctuation separator key-value js">:</span> <span class="constant numeric js">50</span><span class="punctuation separator comma js">,</span> <span class="meta object-literal key js">y</span><span class="punctuation separator key-value js">:</span> <span class="constant numeric js">100</span><span class="punctuation separator comma js">,</span> <span class="meta object-literal key js">opacity</span><span class="punctuation separator key-value js">:</span> <span class="constant numeric js">80</span> <span class="punctuation section block js">}</span></span><span class="punctuation terminator statement js">;</span>
+<span class="storage type js">let</span> <span class="variable other readwrite js">layer</span> <span class="keyword operator assignment js">=</span> <span class="variable other object js">globalThis</span><span class="punctuation accessor js">.</span><span class="meta property object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">createLayerInstance</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>Predefined Layer<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="variable other readwrite js">predefinedData</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span>
+</code></pre>
+<h3 id="non-destructive-editing">Non-Destructive Editing</h3>
+<p>Gyre layers are inherently <strong>non-destructive</strong>, allowing you to modify properties like <code>opacity</code>, <code>width</code>, <code>rotation</code>, and <code>position</code> without altering the original image data:</p>
+<pre class="code">
+<code class="language-javascript"><span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta property object js">opacity</span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">75</span><span class="punctuation terminator statement js">;</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Adjusts the opacity while keeping the original data intact
+</span><span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">unlink</span><span class="meta group js"><span class="punctuation section group js">(</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Unlink to make the layer independent of any references
+</span></code></pre>
+<h3 id="rendering-layers">Rendering Layers</h3>
+<p>To render a layer including all applied masks and opacity settings:</p>
+<pre class="code">
+<code class="language-javascript"><span class="storage type js">let</span> <span class="variable other readwrite js">renderedUrl</span> <span class="keyword operator assignment js">=</span> <span class="variable other readwrite js">await</span> <span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">render</span><span class="meta group js"><span class="punctuation section group js">(</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Get a URL for the rendered image
+</span></code></pre>
+<p>Render a scaled preview:</p>
+<pre class="code">
+<code class="language-javascript"><span class="storage type js">let</span> <span class="variable other readwrite js">previewUrl</span> <span class="keyword operator assignment js">=</span> <span class="variable other readwrite js">await</span> <span class="variable other object js">layer</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">renderInDocumentSize</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="constant numeric js">600</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span><span class="punctuation terminator statement js">;</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Render with a max width of 600 pixels
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li>
+<p><strong>Use Layer References for Reusability</strong>: Leverage <code>ref</code> to link layers for easy reuse across different documents, ensuring design consistency.</p>
+</li>
+<li>
+<p><strong>Custom Plugins with Extended Classes</strong>: When creating new layer types, extend the base class using <code>globalThis.gyre.getLayerBaseClass()</code>. This allows you to build custom behavior while retaining the functionality of a standard Gyre layer.</p>
+<pre class="code">
+<code class="language-javascript">class MySpecialLayer extends globalThis.gyre.getLayerBaseClass() {
+    constructor(name, type) {
+        super(name, type);
+        // Custom initialization
+    }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Caching Considerations</strong>:</p>
+<ul>
+<li>Use the <code>nocache</code> flag to disable automatic image generation caching during operations like resizing to improve performance.</li>
+<li>Once intensive operations are completed it has to be set to <code>false</code> which calls the <code>previewCache()</code> automatically  to update previews.</li>
+</ul>
+</li>
+<li>
+<p><strong>Prepare for Deletions</strong>: Always use <code>prepareDelete()</code> before removing layers to handle references and dependencies properly.</p>
+</li>
+</ol>
+</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#smart-layers">Smart Layers</a></li><li class="page-nav-level-2"><a href="#overview">Overview</a></li><li class="page-nav-level-2"><a href="#table-of-contents">Table of Contents</a></li><li class="page-nav-level-2"><a href="#getting-started">Getting Started</a></li><li class="page-nav-level-3"><a href="#parameters">Parameters:</a></li><li class="page-nav-level-2"><a href="#classes-overview">Classes Overview</a></li><li class="page-nav-level-3"><a href="#layer-creation">Layer Creation</a></li><li class="page-nav-level-3"><a href="#extending-the-layer-class">Extending the Layer Class</a></li><li class="page-nav-level-2"><a href="#layer-properties">Layer Properties</a></li><li class="page-nav-level-2"><a href="#layer-methods">Layer Methods</a></li><li class="page-nav-level-3"><a href="#common-methods">Common Methods</a></li><li class="page-nav-level-4"><a href="#getreflayer">getRefLayer()</a></li><li class="page-nav-level-4"><a href="#getvaluebyref-name">getValueByRef(name)</a></li><li class="page-nav-level-4"><a href="#setvaluebyref-name-value">setValueByRef(name, value)</a></li><li class="page-nav-level-4"><a href="#tojson">toJSON()</a></li><li class="page-nav-level-4"><a href="#unlink">unlink()</a></li><li class="page-nav-level-4"><a href="#preparedelete">prepareDelete()</a></li><li class="page-nav-level-3"><a href="#image-operations-methods">Image Operations Methods</a></li><li class="page-nav-level-4"><a href="#previewcache">previewCache()</a></li><li class="page-nav-level-4"><a href="#generatealphamask">generateAlphaMask()</a></li><li class="page-nav-level-4"><a href="#render">render()</a></li><li class="page-nav-level-4"><a href="#renderindocumentsize-maxwidth-null">renderInDocumentSize(maxWidth = null)</a></li><li class="page-nav-level-4"><a href="#extractimagefromdocument-url">extractImageFromDocument(url)</a></li><li class="page-nav-level-3"><a href="#clippingmask">clippingMask()</a></li><li class="page-nav-level-2"><a href="#masks">Masks</a></li><li class="page-nav-level-3"><a href="#masked-objects">Masked Objects</a></li><li class="page-nav-level-3"><a href="#filter-on-mask">Filter on Mask</a></li><li class="page-nav-level-2"><a href="#layer-usage">Layer Usage</a></li><li class="page-nav-level-3"><a href="#creating-and-manipulating-layers">Creating and Manipulating Layers</a></li><li class="page-nav-level-3"><a href="#non-destructive-editing">Non-Destructive Editing</a></li><li class="page-nav-level-3"><a href="#rendering-layers">Rendering Layers</a></li><li class="page-nav-level-2"><a href="#best-practices">Best Practices</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
+<script id="app.js" async defer type="text/javascript" src="/gyre-sdk/assets/app.f93b0a1c15e882d9.js"></script></body></html>

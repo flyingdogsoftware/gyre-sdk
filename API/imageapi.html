@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>ImageAPI Documentation</title><meta name="description" content="Documentation for ImageAPI Documentation"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/normalize.97087844201bf696.css">
 <link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/light.146e7c3d06d34520.css">
 <link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/dark.e5addf511eda33f2.css">
-<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1724878819";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" type="text/css" href="/gyre-sdk/assets/style.c1e8b00faa060413.css"><script>var DOCGEN_TIMESTAMP="1728862821";var BASE_PATH="/gyre-sdk/";window.onload=function(){document.body.classList.remove("preload")};document.addEventListener("DOMContentLoaded",function(){const a=document.querySelector(`.site-nav a[href="${document.location.pathname}"]`);if(a){const b=a.closest("li");if(b)b.classList.add("active");const c=a.closest("details");if(c){c.setAttribute("open",true)}}});function setColor(){const a=localStorage.getItem("docgen-color");if(a==="dark"){document.documentElement.classList.remove("light");document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark");document.documentElement.classList.add("light")}}setColor()</script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <style>
@@ -48,8 +48,8 @@ td {
 }
 
 
-</style></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><a href="/gyre-sdk/"><img src="/gyre-sdk/logo.png" alt="Gyre SDK logo"></a><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li><li><a href="/gyre-sdk/Plugin_Types/brushes">Brush Plugins</a></li></ul></details></li><li class="nested"><details><summary><span>Gyre API</span></summary><ul><li><a href="/gyre-sdk/API/api">Gyre API</a></li><li><a href="/gyre-sdk/API/imageapi">ImageAPI Documentation</a></li><li><a href="/gyre-sdk/API/layermanager">layerManager API</a></li></ul></details></li><li class="nested"><details><summary><span>UI</span></summary><ul><li><a href="/gyre-sdk/UI/fds_components">FDS Image Editor Components</a></li><li><a href="/gyre-sdk/UI/icon_management">Icon Management</a></li></ul></details></li><li><a href="/gyre-sdk/examples">Gyre SDK Examples</a></li><li><a href="/gyre-sdk/uxp">For Adobe UXP Developers</a></li><li><a href="/gyre-sdk/share">Share Your Plugin</a></li><li><a href="/gyre-sdk/community">Developer Community</a></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="imageapi-documentation">ImageAPI Documentation</h1>
-<p>The <code>ImageAPI</code> provides a set of functions to manipulate images using HTML canvas. The API supports various operations such as color adjustments, scaling, and combining image layers. Below is the detailed documentation of each function available in the <code>ImageAPI</code>.</p>
+</style></head><body class="preload"><label for="menu-toggle-switch" class="menu-toggle-button">☰</label><input type="checkbox" id="menu-toggle-switch" value="0"><div class="page"><div class="header"><div class="logo"><a href="/gyre-sdk/"><img src="/gyre-sdk/logo.png" alt="Gyre SDK logo"></a><h2 class="project-title"><a href="/gyre-sdk/">Gyre SDK</a><span class="project-subtitle">DOCS</span></h2></div><div class="search"><form id="search-form"><input type="text" id="search-box" autocomplete="off" placeholder="Search..."><span class="search-icon">S</span><ul id="search-results"></ul></form></div><div class="header-dummy-right"></div></div><div class="container"><div class="sidebar-left"><nav class="site-nav"><ul class="tree"><li><a href="/gyre-sdk/getting_started">Getting Started with the Gyre SDK</a></li><li class="nested"><details><summary><span>Plugin Types</span></summary><ul><li><a href="/gyre-sdk/Plugin_Types/tools">Tools</a></li><li><a href="/gyre-sdk/Plugin_Types/layers">Custom Layer Types</a></li><li><a href="/gyre-sdk/Plugin_Types/ui_components">UI Components</a></li><li><a href="/gyre-sdk/Plugin_Types/brushes">Brush Plugins</a></li></ul></details></li><li class="nested"><details><summary><span>Gyre API</span></summary><ul><li><a href="/gyre-sdk/API/api">Gyre API</a></li><li><a href="/gyre-sdk/API/imageapi">ImageAPI Documentation</a></li><li><a href="/gyre-sdk/API/layermanager">layerManager API</a></li><li><a href="/gyre-sdk/API/smart_layers">Smart Layers</a></li></ul></details></li><li class="nested"><details><summary><span>UI</span></summary><ul><li><a href="/gyre-sdk/UI/fds_components">FDS Image Editor Components</a></li><li><a href="/gyre-sdk/UI/icon_management">Icon Management</a></li></ul></details></li><li><a href="/gyre-sdk/examples">Gyre SDK Examples</a></li><li><a href="/gyre-sdk/uxp">For Adobe UXP Developers</a></li><li><a href="/gyre-sdk/share">Share Your Plugin</a></li><li><a href="/gyre-sdk/community">Developer Community</a></li></ul></nav><span id="light-dark-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" id="dark-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" id="light-mode-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg></span></div><div class="docgen-content"><h1 id="imageapi-documentation">ImageAPI Documentation</h1>
+<p>The <code>ImageAPI</code> provides a set of functions to manipulate images using HTML canvas. The API supports various operations such as color adjustments, scaling, combining image layers, and processing individual pixels based on custom logic.</p>
 <h2 id="functions">Functions</h2>
 <h3 id="setcolorpreservealpha"><code>setColorPreserveAlpha</code></h3>
 <p>Sets the color of an image while preserving its alpha channel.</p>
@@ -64,6 +64,7 @@ td {
 <ul>
 <li><code>Promise</code> - A promise that resolves when the color change is applied.</li>
 </ul>
+<hr />
 <h3 id="base64tocanvas"><code>base64ToCanvas</code></h3>
 <p>Converts a base64 encoded image to an HTML canvas element.</p>
 <h4 id="parameters">Parameters</h4>
@@ -76,6 +77,7 @@ td {
 <ul>
 <li><code>Promise</code> - A promise that resolves with the canvas element.</li>
 </ul>
+<hr />
 <h3 id="getimagedatacombined"><code>getImageDataCombined</code></h3>
 <p>Retrieves image data from multiple layers within a bounding box and optionally merges the alpha channel from a mask.</p>
 <h4 id="parameters">Parameters</h4>
@@ -94,6 +96,7 @@ td {
 <ul>
 <li><code>Promise</code> - A promise that resolves with the base64 encoded image data.</li>
 </ul>
+<hr />
 <h3 id="scaleimagecanvas"><code>scaleImageCanvas</code></h3>
 <p>Scales an image using an HTML canvas element.</p>
 <h4 id="parameters">Parameters</h4>
@@ -106,6 +109,7 @@ td {
 <ul>
 <li><code>Promise</code> - A promise that resolves with the base64 encoded scaled image.</li>
 </ul>
+<hr />
 <h3 id="getimagesize"><code>getImageSize</code></h3>
 <p>Retrieves the dimensions of an image.</p>
 <h4 id="parameters">Parameters</h4>
@@ -116,6 +120,7 @@ td {
 <ul>
 <li><code>Promise</code> - A promise that resolves with an object containing the width and height of the image.</li>
 </ul>
+<hr />
 <h3 id="adjustdimensions"><code>adjustDimensions</code></h3>
 <p>Calculates image dimensions to fit within a maximum size and be divisible by a specified divider.</p>
 <h4 id="parameters">Parameters</h4>
@@ -130,6 +135,7 @@ td {
 <ul>
 <li><code>Promise</code> - A promise that resolves with an object containing the adjusted width and height.</li>
 </ul>
+<hr />
 <h3 id="fillimagebackground"><code>fillImageBackground</code></h3>
 <p>Fills the transparent parts of an image with a specified color.</p>
 <h4 id="parameters">Parameters</h4>
@@ -141,18 +147,21 @@ td {
 <ul>
 <li><code>Promise</code> - A promise that resolves with the base64 encoded image with the filled background.</li>
 </ul>
+<hr />
 <h3 id="canvasmaketransparentwhite"><code>canvasMakeTransparentWhite</code></h3>
 <p>Makes the transparent parts in the alpha channel of a canvas white.</p>
 <h4 id="parameters">Parameters</h4>
 <ul>
 <li><strong>canvas</strong>: <code>Canvas</code> - The canvas element to modify.</li>
 </ul>
+<hr />
 <h3 id="canvasinvert"><code>canvasInvert</code></h3>
 <p>Inverts the colors of an image on a canvas.</p>
 <h4 id="parameters">Parameters</h4>
 <ul>
 <li><strong>canvas</strong>: <code>Canvas</code> - The canvas element to modify.</li>
 </ul>
+<hr />
 <h3 id="canvasexpandmaskfast"><code>canvasExpandMaskFast</code></h3>
 <p>Performs auto dilation on a mask with a fixed size and returns a new canvas.</p>
 <h4 id="parameters">Parameters</h4>
@@ -163,25 +172,83 @@ td {
 <ul>
 <li><code>Promise</code> - A promise that resolves with the new canvas element.</li>
 </ul>
+<hr />
 <h3 id="applyalphachannel"><code>applyAlphaChannel</code></h3>
 <p>Copies the alpha channel from one image to another.</p>
 <h4 id="parameters">Parameters</h4>
 <ul>
-<li><strong>base64</strong>: <code>string</code> - The base64 encoded image string (or an image url) of the target image.</li>
-<li><strong>sourceImageBase64</strong>: <code>string</code> - The base64 encoded image string (or an image url) of the source image.</li>
+<li><strong>base64</strong>: <code>string</code> - The base64 encoded image string (or an image URL) of the target image.</li>
+<li><strong>sourceImageBase64</strong>: <code>string</code> - The base64 encoded image string (or an image URL) of the source image.</li>
 </ul>
 <h4 id="returns">Returns</h4>
 <ul>
 <li><code>Promise</code> - A promise that resolves with the new image in base64 format.</li>
 </ul>
+<hr />
+<h3 id="processimage"><code>processImage</code></h3>
+<p>Processes the pixels of an image based on a condition and modification function.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>imageUrl</strong>: <code>string</code> - The URL of the image to be processed.</li>
+<li><strong>modifyPixel</strong>: <code>function</code> - A function that takes the pixel data and index, allowing for custom pixel manipulation.</li>
+<li><strong>imageUrl2</strong>: <code>string</code> (optional) - The URL of a second image, if needed for comparison or additional data processing.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the modified image as a base64 encoded string.</li>
+</ul>
+<hr />
+<h3 id="converttransparenttowhite"><code>convertTransparentToWhite</code></h3>
+<p>Converts all transparent pixels in an image to white.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>imageUrl</strong>: <code>string</code> - The URL of the image.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the image in base64 format with transparent pixels converted to white.</li>
+</ul>
+<hr />
+<h3 id="convertwhitetotransparent"><code>convertWhiteToTransparent</code></h3>
+<p>Converts all white pixels in an image to transparent.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>imageUrl</strong>: <code>string</code> - The URL of the image.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the image in base64 format with white pixels converted to transparent.</li>
+</ul>
+<hr />
+<h3 id="loadimage"><code>loadImage</code></h3>
+<p>Loads an image from a URL into an <code>Image</code> object.</p>
+<h4 id="parameters">Parameters</h4>
+<ul>
+<li><strong>url</strong>: <code>string</code> - The URL of the image to load.</li>
+</ul>
+<h4 id="returns">Returns</h4>
+<ul>
+<li><code>Promise</code> - A promise that resolves with the loaded <code>Image</code> object.</li>
+</ul>
+<hr />
 <h2 id="example-usage">Example Usage</h2>
 <pre class="code">
 <code class="language-javascript"><span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Example of how to use the setColorPreserveAlpha function
 </span><span class="keyword control flow js">await</span> <span class="variable other object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta property object js">imageAPI</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">setColorPreserveAlpha</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image_url<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="constant numeric js">255</span><span class="punctuation separator comma js">,</span> <span class="constant numeric js">0</span><span class="punctuation separator comma js">,</span> <span class="constant numeric js">0</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
 
 <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Example of how to use the getImageSize function
-</span><span class="storage type js">let</span> <span class="variable other readwrite js">size</span><span class="keyword operator assignment js">=</span><span class="variable other readwrite js">await</span> <span class="variable other object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta property object js">imageAPI</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">getImageSize</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image_url<span class="punctuation definition string end js">&#39;</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
+</span><span class="storage type js">let</span> <span class="variable other readwrite js">size</span> <span class="keyword operator assignment js">=</span> <span class="variable other readwrite js">await</span> <span class="variable other object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta property object js">imageAPI</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">getImageSize</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image_url<span class="punctuation definition string end js">&#39;</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
 <span class="meta function-call method js"><span class="support type object console js">console</span><span class="punctuation accessor js">.</span><span class="support function console js">log</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="variable other readwrite js">size</span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
+
+<span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Example of how to use processImage with a custom pixel modification
+</span><span class="keyword control flow js">await</span> <span class="variable other object js">gyre</span><span class="punctuation accessor js">.</span><span class="meta property object js">imageAPI</span><span class="punctuation accessor js">.</span><span class="meta function-call method js"><span class="variable function js">processImage</span><span class="meta group js"><span class="punctuation section group js">(</span><span class="string quoted single js"><span class="punctuation definition string begin js">&#39;</span>image_url<span class="punctuation definition string end js">&#39;</span></span><span class="punctuation separator comma js">,</span> <span class="meta function declaration js"><span class="punctuation section group begin js">(</span><span class="variable parameter function js">data</span><span class="punctuation separator parameter function js">,</span> <span class="variable parameter function js">i</span><span class="punctuation section group end js">)</span><span class="meta function declaration js"> </span><span class="storage type function arrow js">=&gt;</span></span> <span class="meta block js"><span class="punctuation section block js">{</span>
+  <span class="meta conditional js"><span class="keyword control conditional js">if</span> <span class="meta group js"><span class="punctuation section group js">(</span><span class="variable other object js">data</span><span class="meta brackets js"><span class="punctuation section brackets js">[</span><span class="variable other readwrite js">i</span> <span class="keyword operator arithmetic js">+</span> <span class="constant numeric js">3</span><span class="punctuation section brackets js">]</span></span> <span class="keyword operator comparison js">===</span> <span class="constant numeric js">0</span><span class="punctuation section group js">)</span></span> <span class="meta block js"><span class="punctuation section block js">{</span>
+    <span class="variable other object js">data</span><span class="meta brackets js"><span class="punctuation section brackets js">[</span><span class="variable other readwrite js">i</span><span class="punctuation section brackets js">]</span></span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">255</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Red
+</span>    <span class="variable other object js">data</span><span class="meta brackets js"><span class="punctuation section brackets js">[</span><span class="variable other readwrite js">i</span> <span class="keyword operator arithmetic js">+</span> <span class="constant numeric js">1</span><span class="punctuation section brackets js">]</span></span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">255</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Green
+</span>    <span class="variable other object js">data</span><span class="meta brackets js"><span class="punctuation section brackets js">[</span><span class="variable other readwrite js">i</span> <span class="keyword operator arithmetic js">+</span> <span class="constant numeric js">2</span><span class="punctuation section brackets js">]</span></span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">255</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Blue
+</span>    <span class="variable other object js">data</span><span class="meta brackets js"><span class="punctuation section brackets js">[</span><span class="variable other readwrite js">i</span> <span class="keyword operator arithmetic js">+</span> <span class="constant numeric js">3</span><span class="punctuation section brackets js">]</span></span> <span class="keyword operator assignment js">=</span> <span class="constant numeric js">255</span> <span class="comment line double-slash js"><span class="punctuation definition comment js">//</span> Fully opaque
+</span>  </span><span class="meta block js"><span class="punctuation section block js">}</span></span></span>
+<span class="punctuation section block js">}</span></span></span><span class="meta group js"><span class="punctuation section group js">)</span></span></span>
 </code></pre>
-</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#imageapi-documentation">ImageAPI Documentation</a></li><li class="page-nav-level-2"><a href="#functions">Functions</a></li><li class="page-nav-level-3"><a href="#setcolorpreservealpha">setColorPreserveAlpha</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#base64tocanvas">base64ToCanvas</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getimagedatacombined">getImageDataCombined</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#scaleimagecanvas">scaleImageCanvas</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getimagesize">getImageSize</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#adjustdimensions">adjustDimensions</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#fillimagebackground">fillImageBackground</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#canvasmaketransparentwhite">canvasMakeTransparentWhite</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#canvasinvert">canvasInvert</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#canvasexpandmaskfast">canvasExpandMaskFast</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#applyalphachannel">applyAlphaChannel</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-2"><a href="#example-usage">Example Usage</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
+</div><div class="sidebar-right"><div class="page-nav" id="page-nav"><p class="page-nav-header">On this page</p><ul><li class="page-nav-level-1"><a href="#imageapi-documentation">ImageAPI Documentation</a></li><li class="page-nav-level-2"><a href="#functions">Functions</a></li><li class="page-nav-level-3"><a href="#setcolorpreservealpha">setColorPreserveAlpha</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#base64tocanvas">base64ToCanvas</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getimagedatacombined">getImageDataCombined</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#scaleimagecanvas">scaleImageCanvas</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#getimagesize">getImageSize</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#adjustdimensions">adjustDimensions</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#fillimagebackground">fillImageBackground</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#canvasmaketransparentwhite">canvasMakeTransparentWhite</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#canvasinvert">canvasInvert</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-3"><a href="#canvasexpandmaskfast">canvasExpandMaskFast</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#applyalphachannel">applyAlphaChannel</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#processimage">processImage</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#converttransparenttowhite">convertTransparentToWhite</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#convertwhitetotransparent">convertWhiteToTransparent</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-3"><a href="#loadimage">loadImage</a></li><li class="page-nav-level-4"><a href="#parameters">Parameters</a></li><li class="page-nav-level-4"><a href="#returns">Returns</a></li><li class="page-nav-level-2"><a href="#example-usage">Example Usage</a></li></ul></div></div></div></div><script id="elasticlunr.min.js" async defer type="text/javascript" src="/gyre-sdk/assets/elasticlunr.min.d5632d4ce358acab.js"></script>
 <script id="app.js" async defer type="text/javascript" src="/gyre-sdk/assets/app.f93b0a1c15e882d9.js"></script></body></html>
